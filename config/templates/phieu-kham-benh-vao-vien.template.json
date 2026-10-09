@@ -1,0 +1,83 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên đầy đủ của Sở Y tế ở đầu biểu mẫu.",
+    "Bệnh viện": "Tên đầy đủ của bệnh viện ở đầu biểu mẫu.",
+    "Tên phiếu": "Tiêu đề đầy đủ của biểu mẫu, gồm cả số thứ tự trong ngoặc nếu có.",
+    "Phòng khám": "Phòng khám đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Mã số": "Mã số biểu mẫu hoặc hồ sơ đúng như trên phiếu; giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Số vào viện": "Số vào viện của hồ sơ; giữ nguyên ký tự và số 0 ở đầu.",
+    "Mã bệnh nhân": "Mã người bệnh; giữ nguyên chữ cái, chữ số và số 0 ở đầu.",
+    "Phân loại": {
+      "Thường": "Ô 'Thường' trong mục 'Phân loại': true nếu được chọn, false nếu không.",
+      "Cấp cứu": "Ô 'Cấp cứu' trong mục 'Phân loại': true nếu được chọn, false nếu không."
+    }
+  },
+  "I. HÀNH CHÍNH": {
+    "Họ và tên": "Họ và tên đầy đủ của người tương ứng trong đúng mục hiện tại.",
+    "Sinh ngày": "Ngày sinh của người bệnh. Trên PDF in 8 chữ số trong các ô ngày/tháng/năm (không có dấu phân cách); giá trị ghép thành dạng dd/mm/yyyy, giữ số 0 ở đầu.",
+    "Tuổi": "Tuổi của người bệnh, giữ cả từ 'tuổi' nếu được in trên biểu mẫu.",
+    "Giới tính": {
+      "Nam": "Ô 'Nam' trong mục 'Giới tính': true nếu được chọn, false nếu không.",
+      "Nữ": "Ô 'Nữ' trong mục 'Giới tính': true nếu được chọn, false nếu không."
+    },
+    "Nghề nghiệp": "Nghề nghiệp của người bệnh.",
+    "Mã nghề nghiệp": "Mã nghề nghiệp đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Dân tộc": "Dân tộc của người bệnh.",
+    "Mã dân tộc": "Mã dân tộc đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Ngoại kiều": "Quốc tịch hoặc thông tin ngoại kiều của người bệnh.",
+    "Mã ngoại kiều": "Mã ngoại kiều đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Địa chỉ": "Địa chỉ đầy đủ đúng như trên biểu mẫu.",
+    "Mã địa chỉ": "Mã địa chỉ đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Huyện (Q, Tx)": "Huyện/Quận/Thị xã đúng như trên biểu mẫu; null nếu không có thông tin.",
+    "Mã huyện (Q, Tx)": "Mã huyện/quận/thị xã đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Tỉnh, thành phố": "Tỉnh/Thành phố đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Mã tỉnh, thành phố": "Mã tỉnh/thành phố đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Nơi làm việc": "Nơi làm việc đúng như trên biểu mẫu; null nếu không có thông tin.",
+    "Đối tượng": {
+      "BHYT": "Ô 'BHYT' trong mục 'Đối tượng': true nếu được chọn, false nếu không.",
+      "Thu phí": "Ô 'Thu phí' trong mục 'Đối tượng': true nếu được chọn, false nếu không.",
+      "Miễn": "Ô 'Miễn' trong mục 'Đối tượng': true nếu được chọn, false nếu không.",
+      "Khác": "Ô 'Khác' trong mục 'Đối tượng': true nếu được chọn, false nếu không."
+    },
+    "BHYT giá trị đến": "Ngày hết hiệu lực của thẻ BHYT.",
+    "Số thẻ BHYT": "Số thẻ bảo hiểm y tế; giữ nguyên chữ cái, chữ số, khoảng trắng và số 0 ở đầu.",
+    "Họ tên, địa chỉ người nhà khi cần báo tin": "Họ tên hoặc thông tin họ tên địa chỉ người nhà đúng như trên biểu mẫu, không suy diễn phần không được ghi.",
+    "Số điện thoại": "Số điện thoại của người nhà, ghi sau nhãn 'Số điện thoại:' trên cùng dòng mục 11 'Họ tên, địa chỉ người nhà khi cần báo tin'; giữ nguyên dấu phân cách và số 0 ở đầu; null nếu để trống.",
+    "Địa chỉ người nhà": "Địa chỉ đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Đến khám bệnh lúc": "Đến khám bệnh lúc đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Chẩn đoán nơi giới thiệu": "Chẩn đoán nơi giới thiệu được ghi trong mục hiện tại, gồm mã ICD và tên bệnh nếu có."
+  },
+  "II. LÝ DO VÀO VIỆN": "Lý do vào viện đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+  "III. HỎI BỆNH": {
+    "Quá trình bệnh lý": "Nội dung quá trình bệnh lý đúng như trên biểu mẫu, giữ nguyên thứ tự các dòng và dấu đầu dòng.",
+    "Tiền sử bệnh": {
+      "Bản thân": "Bản thân đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+      "Gia đình": "Gia đình đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có."
+    }
+  },
+  "IV. KHÁM XÉT": {
+    "Toàn thân": [
+      "Một dòng mô tả toàn thân trên phiếu, giữ nguyên thứ tự và dấu câu."
+    ],
+    "Sinh hiệu": {
+      "Mạch": "Trị số mạch, giữ nguyên đơn vị nếu được ghi kèm.",
+      "Nhiệt độ": "Trị số thân nhiệt, giữ nguyên đơn vị nếu được ghi kèm.",
+      "Huyết áp": "Trị số huyết áp dạng tâm thu/tâm trương, giữ nguyên đơn vị nếu được ghi kèm.",
+      "Nhịp thở": "Trị số nhịp thở, giữ nguyên đơn vị nếu được ghi kèm.",
+      "Cân nặng": "Trị số cân nặng, giữ nguyên đơn vị nếu được ghi kèm."
+    },
+    "Các bộ phận": [
+      "Một dòng mô tả các bộ phận trên phiếu, giữ nguyên thứ tự và dấu câu."
+    ],
+    "Tóm tắt kết quả cận lâm sàng": "Nội dung tóm tắt kết quả cận lâm sàng đúng như trên biểu mẫu, giữ nguyên thứ tự các dòng và dấu đầu dòng.",
+    "Chẩn đoán vào viện": "Chẩn đoán lúc vào viện, gồm mã ICD và tên bệnh nếu có.",
+    "Đã xử lý": "Nội dung ghi sau nhãn 'Đã xử lý (thuốc, chăm sóc)..:' đúng như trên biểu mẫu, kể cả khi chỉ là một ký tự đơn lẻ; null nếu để trống.",
+    "Cho vào điều trị tại khoa": "Cho vào điều trị tại khoa đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Chú ý": "Chú ý đúng như trên biểu mẫu; null nếu không có thông tin."
+  },
+  "XÁC NHẬN KÝ": {
+    "Địa điểm ngày": "Địa điểm ngày đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Vai trò": "Vai trò hoặc chức danh của người ký trong đúng khối xác nhận.",
+    "Họ tên": "Họ và tên đầy đủ của người tương ứng trong đúng mục hiện tại."
+  }
+}

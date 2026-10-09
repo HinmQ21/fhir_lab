@@ -1,0 +1,590 @@
+{
+ "task": "orders",
+ "docs": [
+  "doc-04"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "service_requests": [
+   {
+    "id": "sr-1-chup-x-quang-nguc-thang",
+    "category": "CDHA",
+    "code": {
+     "text": "Chụp X-quang ngực thẳng",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "sr-2-tong-phan-tich-te-bao-mau",
+    "category": "XN",
+    "code": {
+     "text": "Tổng phân tích tế bào máu",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "sr-3-glucose",
+    "category": "XN",
+    "code": {
+     "text": "Glucose",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "sr-4-ure",
+    "category": "XN",
+    "code": {
+     "text": "Ure",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "sr-5-creatinin",
+    "category": "XN",
+    "code": {
+     "text": "Creatinin",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "sr-6-crp",
+    "category": "XN",
+    "code": {
+     "text": "CRP",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "sr-7-hba1c",
+    "category": "XN",
+    "code": {
+     "text": "HbA1c",
+     "codings": []
+    },
+    "status": "completed",
+    "intent": "order",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "medications": [
+   {
+    "id": "med-ceftriaxon-1g",
+    "code": {
+     "text": "Ceftriaxon 1g",
+     "codings": []
+    },
+    "form": {
+     "text": "lọ"
+    },
+    "ingredients": [
+     {
+      "item": {
+       "text": "Ceftriaxon"
+      },
+      "strength": {
+       "value": 1,
+       "unit_raw": "g"
+      },
+      "per": "lọ"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "med-metformin-500mg",
+    "code": {
+     "text": "Metformin 500mg",
+     "codings": []
+    },
+    "form": {
+     "text": "viên"
+    },
+    "ingredients": [
+     {
+      "item": {
+       "text": "Metformin"
+      },
+      "strength": {
+       "value": 500,
+       "unit_raw": "mg"
+      },
+      "per": "viên"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "med-amlodipin-5mg",
+    "code": {
+     "text": "Amlodipin 5mg",
+     "codings": []
+    },
+    "form": {
+     "text": "viên"
+    },
+    "ingredients": [
+     {
+      "item": {
+       "text": "Amlodipin"
+      },
+      "strength": {
+       "value": 5,
+       "unit_raw": "mg"
+      },
+      "per": "viên"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "medication_requests": [
+   {
+    "id": "mr-ceftriaxon-1g-20260902",
+    "medication": "med-ceftriaxon-1g",
+    "status": "completed",
+    "intent": "order",
+    "category": "inpatient",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "dosage": {
+     "text": "Ceftriaxon 1g x 2 lọ, tiêm tĩnh mạch chậm, sáng 8h - chiều 16h",
+     "route": {
+      "text": "tiêm tĩnh mạch chậm",
+      "vn_code": "2.04"
+     },
+     "timing": {
+      "frequency": 2,
+      "period": 1,
+      "period_unit": "d",
+      "time_of_day": [
+       "08:00:00",
+       "16:00:00"
+      ]
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "lọ"
+     }
+    },
+    "dispense": {
+     "value": 2,
+     "unit_raw": "lọ"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "mr-metformin-500mg-20260902",
+    "medication": "med-metformin-500mg",
+    "status": "completed",
+    "intent": "order",
+    "category": "inpatient",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "dosage": {
+     "text": "Metformin 500mg x 2 viên, uống sáng - chiều sau ăn",
+     "route": {
+      "text": "uống",
+      "vn_code": "1.01"
+     },
+     "timing": {
+      "frequency": 2,
+      "period": 1,
+      "period_unit": "d"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "dispense": {
+     "value": 2,
+     "unit_raw": "viên"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "mr-amlodipin-5mg-20260902",
+    "medication": "med-amlodipin-5mg",
+    "status": "completed",
+    "intent": "order",
+    "category": "inpatient",
+    "authored_on": "2026-09-02T10:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "dosage": {
+     "text": "Amlodipin 5mg x 1 viên, uống sáng",
+     "route": {
+      "text": "uống",
+      "vn_code": "1.01"
+     },
+     "timing": {
+      "frequency": 1,
+      "period": 1,
+      "period_unit": "d",
+      "time_of_day": [
+       "08:00:00"
+      ]
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "dispense": {
+     "value": 1,
+     "unit_raw": "viên"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "mr-ceftriaxon-1g-20260903",
+    "medication": "med-ceftriaxon-1g",
+    "status": "completed",
+    "intent": "order",
+    "category": "inpatient",
+    "authored_on": "2026-09-03T08:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "dosage": {
+     "text": "Tiếp tục Ceftriaxon 1g x 2 lọ, tiêm tĩnh mạch",
+     "route": {
+      "text": "tiêm tĩnh mạch",
+      "vn_code": "2.04"
+     },
+     "timing": {
+      "frequency": 2,
+      "period": 1,
+      "period_unit": "d",
+      "time_of_day": [
+       "08:00:00",
+       "16:00:00"
+      ]
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "lọ"
+     }
+    },
+    "dispense": {
+     "value": 2,
+     "unit_raw": "lọ"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "mr-metformin-500mg-20260903",
+    "medication": "med-metformin-500mg",
+    "status": "completed",
+    "intent": "order",
+    "category": "inpatient",
+    "authored_on": "2026-09-03T08:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "dosage": {
+     "text": "Metformin như trên",
+     "route": {
+      "text": "uống",
+      "vn_code": "1.01"
+     },
+     "timing": {
+      "frequency": 2,
+      "period": 1,
+      "period_unit": "d"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "dispense": {
+     "value": 2,
+     "unit_raw": "viên"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "mr-amlodipin-5mg-20260903",
+    "medication": "med-amlodipin-5mg",
+    "status": "completed",
+    "intent": "order",
+    "category": "inpatient",
+    "authored_on": "2026-09-03T08:00:00+07:00",
+    "requester": "pr-p2",
+    "reason_reference": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "dosage": {
+     "text": "Amlodipin như trên",
+     "route": {
+      "text": "uống",
+      "vn_code": "1.01"
+     },
+     "timing": {
+      "frequency": 1,
+      "period": 1,
+      "period_unit": "d",
+      "time_of_day": [
+       "08:00:00"
+      ]
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "dispense": {
+     "value": 1,
+     "unit_raw": "viên"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "care_plans": [
+   {
+    "id": "cp-tho-oxy-kinh-mui-2l-phut-20260902",
+    "title": "Thở oxy kính mũi",
+    "status": "completed",
+    "intent": "order",
+    "category": [
+     {
+      "text": "Chăm sóc"
+     }
+    ],
+    "period": {
+     "start": "2026-09-02T10:00:00+07:00"
+    },
+    "created": "2026-09-02T10:00:00+07:00",
+    "author": "pr-p2",
+    "addresses": [
+     "cond-vp-duoi-phai"
+    ],
+    "activities": [
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Thở oxy kính mũi"
+      },
+      "description": "Thở oxy kính mũi 2 lít/phút",
+      "status": "completed"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "cp-cham-soc-cap-ii-20260902",
+    "title": "Chăm sóc cấp II",
+    "status": "completed",
+    "intent": "order",
+    "category": [
+     {
+      "text": "Chăm sóc"
+     }
+    ],
+    "period": {
+     "start": "2026-09-02T10:00:00+07:00"
+    },
+    "created": "2026-09-02T10:00:00+07:00",
+    "author": "pr-p2",
+    "addresses": [
+     "cond-vp-duoi-phai",
+     "cond-dtd-type2",
+     "cond-tha"
+    ],
+    "activities": [
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Chăm sóc cấp II"
+      },
+      "description": "Chăm sóc cấp II",
+      "status": "completed"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "cp-ngung-tho-oxy-20260903",
+    "title": "Ngừng thở oxy",
+    "status": "completed",
+    "intent": "order",
+    "category": [
+     {
+      "text": "Chăm sóc"
+     }
+    ],
+    "period": {
+     "start": "2026-09-03T08:00:00+07:00"
+    },
+    "created": "2026-09-03T08:00:00+07:00",
+    "author": "pr-p2",
+    "addresses": [
+     "cond-vp-duoi-phai"
+    ],
+    "activities": [
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Ngừng thở oxy"
+      },
+      "description": "Ngừng thở oxy",
+      "status": "completed"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "documents_patch": [
+   {
+    "id": "doc-04",
+    "title": "PHIẾU ĐIỀU TRỊ",
+    "date": "2026-09-02T10:00:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ],
+    "note": "Sử dụng thời gian y lệnh đầu tiên làm thời gian lập phiếu."
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": [
+   "Chẩn đoán 'Viêm phổi thùy dưới phải / Đái tháo đường type 2 / Tăng huyết áp' được giả định đã có các Condition IDs tương ứng: cond-vp-duoi-phai, cond-dtd-type2, cond-tha.",
+   "Thời gian 'sáng - chiều' cho Metformin không đủ chi tiết để tạo time_of_day cụ thể, chỉ dùng frequency và period.",
+   "Y lệnh 'Tiếp tục Ceftriaxon 1g x 2 lọ, tiêm tĩnh mạch' và 'Metformin, Amlodipin như trên' vào ngày 03/09/2026 được suy luận về liều lượng, đường dùng và thời gian dựa trên y lệnh của ngày 02/09/2026."
+  ]
+ }
+}

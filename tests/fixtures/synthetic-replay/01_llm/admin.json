@@ -1,0 +1,482 @@
+{
+ "task": "admin",
+ "docs": [
+  "doc-01",
+  "doc-02",
+  "doc-03",
+  "doc-04",
+  "doc-05",
+  "doc-06"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "patient": {
+   "id": "pt-id1",
+   "name": {
+    "text": "Nguyễn Thị Mẫu"
+   },
+   "gender": "female",
+   "birth_date": "14/03/1958",
+   "identifiers": [
+    {
+     "type": "MRN",
+     "value": "BN009900123",
+     "sources": [
+      "doc-01",
+      "doc-02",
+      "doc-03"
+     ]
+    },
+    {
+     "type": "BHYT",
+     "value": "HT2259900112233",
+     "sources": [
+      "doc-01",
+      "doc-06"
+     ]
+    },
+    {
+     "type": "CCCD",
+     "value": "025158009911",
+     "sources": [
+      "doc-01"
+     ]
+    },
+    {
+     "type": "OTHER",
+     "text": "Điện thoại",
+     "value": "0912000111",
+     "sources": [
+      "doc-01"
+     ]
+    }
+   ],
+   "ethnicity": {
+    "code": "01",
+    "text": "Kinh"
+   },
+   "occupation": {
+    "text": "Hưu trí"
+   },
+   "nationality": {
+    "code": "VN",
+    "text": "Việt Nam"
+   },
+   "address": {
+    "text": "Số 12 ngõ 4 đường Thử Nghiệm, Phường Nông Trang, Tỉnh Phú Thọ",
+    "line": [
+     "Số 12 ngõ 4 đường Thử Nghiệm"
+    ],
+    "ward": "Phường Nông Trang",
+    "state": "Tỉnh Phú Thọ",
+    "country": "VN"
+   },
+   "managing_organization": "org-bvdk-phutho",
+   "sources": [
+    "doc-01",
+    "doc-02",
+    "doc-03",
+    "doc-04",
+    "doc-05",
+    "doc-06"
+   ]
+  },
+  "coverage": {
+   "id": "cov-bhyt-id5",
+   "bhyt_number": "HT2259900112233",
+   "card_type": {
+    "code": "GD"
+   },
+   "period": {
+    "end": "2026-12-31"
+   },
+   "payor": "Bảo hiểm xã hội Việt Nam",
+   "status": "active",
+   "sources": [
+    "doc-01",
+    "doc-06"
+   ]
+  },
+  "encounter": {
+   "id": "enc-id6",
+   "identifiers": [
+    {
+     "type": "SO_VAO_VIEN",
+     "text": "Số vào viện",
+     "value": "26.009871",
+     "sources": [
+      "doc-04"
+     ]
+    }
+   ],
+   "status": "finished",
+   "class": "IMP",
+   "type": {
+    "code": "03"
+   },
+   "period": {
+    "start": "2026-09-02T08:30:00+07:00",
+    "end": "2026-09-09T09:00:00+07:00"
+   },
+   "reason_text": "Sốt, ho có đờm, khó thở 3 ngày",
+   "service_provider": "org-bvdk-phutho",
+   "department": "dept-noi-ho-hap",
+   "locations": [
+    {
+     "location": "loc-buong-302",
+     "period": {
+      "start": "2026-09-02T08:30:00+07:00",
+      "end": "2026-09-09T09:00:00+07:00"
+     },
+     "status": "completed",
+     "sources": [
+      "doc-02",
+      "doc-03",
+      "doc-04",
+      "doc-05"
+     ]
+    },
+    {
+     "location": "loc-giuong-07",
+     "period": {
+      "start": "2026-09-02T08:30:00+07:00",
+      "end": "2026-09-09T09:00:00+07:00"
+     },
+     "status": "completed",
+     "sources": [
+      "doc-02",
+      "doc-03",
+      "doc-04",
+      "doc-05"
+     ]
+    }
+   ],
+   "participants": [
+    {
+     "individual": "pr-p2",
+     "type": "ADM",
+     "period": {
+      "start": "2026-09-02T08:30:00+07:00"
+     },
+     "sources": [
+      "doc-01"
+     ]
+    },
+    {
+     "individual": "pr-p2",
+     "type": "ATND",
+     "period": {
+      "start": "2026-09-02T08:30:00+07:00"
+     },
+     "sources": [
+      "doc-04",
+      "doc-06"
+     ]
+    }
+   ],
+   "referral_mode": "1",
+   "treatment_outcome": "2",
+   "discharge_disposition": "1",
+   "discharge_disposition_text": "Ra viện",
+   "payment_method": "1",
+   "length_days": 7,
+   "admit_source_text": "Tự đến",
+   "sources": [
+    "doc-01",
+    "doc-04",
+    "doc-06"
+   ]
+  },
+  "organizations": [
+   {
+    "id": "org-bvdk-phutho",
+    "kind": "facility",
+    "name": "BỆNH VIỆN ĐA KHOA TỈNH PHÚ THỌ",
+    "org_type": "BV",
+    "sources": [
+     "doc-01",
+     "doc-02",
+     "doc-03",
+     "doc-04",
+     "doc-05",
+     "doc-06"
+    ]
+   },
+   {
+    "id": "dept-kham-benh",
+    "kind": "department",
+    "name": "Khoa Khám bệnh",
+    "department_code": "K01",
+    "part_of": "org-bvdk-phutho",
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "dept-noi-ho-hap",
+    "kind": "department",
+    "name": "Khoa Nội hô hấp",
+    "department_code": "K50",
+    "part_of": "org-bvdk-phutho",
+    "sources": [
+     "doc-01",
+     "doc-02",
+     "doc-03",
+     "doc-04",
+     "doc-05",
+     "doc-06"
+    ]
+   },
+   {
+    "id": "dept-xet-nghiem",
+    "kind": "department",
+    "name": "KHOA XÉT NGHIỆM",
+    "department_code": "K47",
+    "part_of": "org-bvdk-phutho",
+    "sources": [
+     "doc-02",
+     "doc-03"
+    ]
+   }
+  ],
+  "locations": [
+   {
+    "id": "loc-buong-302",
+    "name": "Buồng 302",
+    "kind": "room",
+    "local_code": "302",
+    "managing_organization": "dept-noi-ho-hap",
+    "sources": [
+     "doc-02",
+     "doc-03",
+     "doc-04",
+     "doc-05"
+    ]
+   },
+   {
+    "id": "loc-giuong-07",
+    "name": "Giường 07",
+    "kind": "bed",
+    "local_code": "07",
+    "managing_organization": "dept-noi-ho-hap",
+    "part_of": "loc-buong-302",
+    "sources": [
+     "doc-02",
+     "doc-03",
+     "doc-04",
+     "doc-05"
+    ]
+   }
+  ],
+  "practitioners": [
+   {
+    "id": "pr-p2",
+    "name_raw": "BSCKI. Phạm Minh Thử",
+    "name": {
+     "text": "Phạm Minh Thử"
+    },
+    "qualifications": [
+     "BS-CKI"
+    ],
+    "roles": [
+     {
+      "organization": "dept-kham-benh",
+      "title_text": "Bác sĩ khám bệnh",
+      "sources": [
+       "doc-01"
+      ]
+     },
+     {
+      "organization": "dept-noi-ho-hap",
+      "title_text": "Bác sĩ chỉ định",
+      "sources": [
+       "doc-02",
+       "doc-03"
+      ]
+     },
+     {
+      "organization": "dept-noi-ho-hap",
+      "title_text": "Bác sĩ điều trị",
+      "sources": [
+       "doc-04",
+       "doc-06"
+      ]
+     }
+    ],
+    "sources": [
+     "doc-01",
+     "doc-02",
+     "doc-03",
+     "doc-04",
+     "doc-06"
+    ]
+   },
+   {
+    "id": "pr-p4",
+    "name_raw": "KTV. Đỗ Thu Kiểm",
+    "name": {
+     "text": "Đỗ Thu Kiểm"
+    },
+    "qualifications": [
+     "KTV"
+    ],
+    "roles": [
+     {
+      "organization": "dept-xet-nghiem",
+      "title_text": "Người thực hiện",
+      "sources": [
+       "doc-02",
+       "doc-03"
+      ]
+     }
+    ],
+    "sources": [
+     "doc-02",
+     "doc-03"
+    ]
+   },
+   {
+    "id": "pr-p5",
+    "name_raw": "ThS.BS. Vũ Hữu Mô",
+    "name": {
+     "text": "Vũ Hữu Mô"
+    },
+    "qualifications": [
+     "ThS",
+     "BS"
+    ],
+    "roles": [
+     {
+      "organization": "dept-xet-nghiem",
+      "title_text": "Trưởng khoa xét nghiệm",
+      "sources": [
+       "doc-02",
+       "doc-03"
+      ]
+     }
+    ],
+    "sources": [
+     "doc-02",
+     "doc-03"
+    ]
+   },
+   {
+    "id": "pr-p6",
+    "name_raw": "ĐD. Hoàng Thị Lành",
+    "name": {
+     "text": "Hoàng Thị Lành"
+    },
+    "qualifications": [
+     "DD"
+    ],
+    "roles": [
+     {
+      "organization": "dept-noi-ho-hap",
+      "title_text": "Điều dưỡng",
+      "sources": [
+       "doc-05"
+      ]
+     }
+    ],
+    "sources": [
+     "doc-05"
+    ]
+   }
+  ],
+  "documents_patch": [
+   {
+    "id": "doc-01",
+    "title": "PHIẾU KHÁM BỆNH VÀO VIỆN",
+    "date": "2026-09-02",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   },
+   {
+    "id": "doc-02",
+    "title": "KẾT QUẢ XÉT NGHIỆM HUYẾT HỌC",
+    "date": "2026-09-02T10:05:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p4",
+     "pr-p5"
+    ]
+   },
+   {
+    "id": "doc-03",
+    "title": "KẾT QUẢ XÉT NGHIỆM SINH HÓA MÁU",
+    "date": "2026-09-02T10:40:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p4",
+     "pr-p5"
+    ]
+   },
+   {
+    "id": "doc-04",
+    "title": "PHIẾU ĐIỀU TRỊ",
+    "date": "2026-09-02T10:00:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   },
+   {
+    "id": "doc-05",
+    "title": "PHIẾU CHĂM SÓC (Cấp II)",
+    "date": "2026-09-02T14:00:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p6"
+    ]
+   },
+   {
+    "id": "doc-06",
+    "title": "BẢN TÓM TẮT HỒ SƠ BỆNH ÁN",
+    "date": "2026-09-09",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   }
+  ],
+  "conflicts": [
+   {
+    "field": "patient.birth_date",
+    "values": [
+     {
+      "value": "14/03/1958",
+      "source": "doc-01"
+     },
+     {
+      "value": "1958",
+      "source": "doc-02"
+     },
+     {
+      "value": "1958",
+      "source": "doc-03"
+     },
+     {
+      "value": "14/03/1958",
+      "source": "doc-06"
+     }
+    ],
+    "resolution": "Sử dụng giá trị từ Bản tóm tắt HSBA (doc-06) và Phiếu khám bệnh vào viện (doc-01) vì đây là tài liệu hành chính chính thức và tài liệu kết luận.",
+    "rationale": "Bản tóm tắt HSBA và Phiếu khám bệnh vào viện là tài liệu hành chính chính thức, có độ tin cậy cao hơn phiếu xét nghiệm về thông tin hành chính."
+   }
+  ],
+  "unmapped": [],
+  "review_notes": [
+   "Mã thẻ BHYT HT2259900112233 có 2 ký tự đầu là 'GD', suy luận card_type là 'GD'.",
+   "Mức hưởng BHYT không được ghi rõ trên phiếu, không thể suy luận benefit_level.",
+   "Nơi ĐKKCB ban đầu không được ghi rõ trên phiếu BHYT.",
+   "Thời gian vào viện trên Phiếu khám bệnh vào viện (doc-01) là 08h30 ngày 02/09/2026. Thời gian ra viện trên Bản tóm tắt HSBA (doc-06) là 09h00 ngày 09/09/2026. Tính toán số ngày điều trị là 7 ngày."
+  ]
+ }
+}

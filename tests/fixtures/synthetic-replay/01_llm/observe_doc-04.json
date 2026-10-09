@@ -1,0 +1,528 @@
+{
+ "task": "observe:doc-04",
+ "docs": [
+  "doc-04"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "observations": [
+   {
+    "id": "obs-vs-04-0902-1000-nhiet-do",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhiệt độ",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T10:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 38.6,
+      "unit_raw": "độ"
+     }
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-exam-04-0902-1000-phoi-ran-no-day-phai",
+    "kind": "exam",
+    "code": {
+     "text": "Phổi ran nổ đáy phải",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T10:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "string": "Phổi ran nổ đáy phải"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-vs-04-0902-1000-spo2",
+    "kind": "vital-sign",
+    "code": {
+     "text": "SpO2",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T10:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 93.0,
+      "unit_raw": "%"
+     }
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-vs-04-0903-0800-nhiet-do",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhiệt độ",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-03T08:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 37.2,
+      "unit_raw": "độ"
+     }
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-vs-04-0903-0800-mach",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Mạch",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-03T08:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 86.0,
+      "unit_raw": "l/p"
+     }
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-vs-04-0903-0800-huyet-ap",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Huyết áp",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-03T08:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "components": [
+     {
+      "code": {
+       "text": "Huyết áp tâm thu",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 130,
+        "unit_raw": "mmHg"
+       }
+      }
+     },
+     {
+      "code": {
+       "text": "Huyết áp tâm trương",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 80,
+        "unit_raw": "mmHg"
+       }
+      }
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-vs-04-0903-0800-spo2",
+    "kind": "vital-sign",
+    "code": {
+     "text": "SpO2",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-03T08:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 96.0,
+      "unit_raw": "%"
+     }
+    },
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "obs-exam-04-0903-0800-x-quang-dam-mo-day-phoi-phai",
+    "kind": "exam",
+    "code": {
+     "text": "X-quang: đám mờ đáy phổi phải",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-03T08:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "string": "đám mờ đáy phổi phải"
+    },
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "medication_administrations": [
+   {
+    "id": "ma-ceftriaxon-1g-20260902-0800",
+    "medication": "med-ceftriaxon-1g",
+    "request": "mr-ceftriaxon-1g-20260902",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02T08:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Ceftriaxon 1g x 1 lọ, tiêm tĩnh mạch chậm",
+     "dose": {
+      "value": 1,
+      "unit_raw": "lọ"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'sáng 8h' và tổng liều '2 lọ' cho cả ngày.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-ceftriaxon-1g-20260902-1600",
+    "medication": "med-ceftriaxon-1g",
+    "request": "mr-ceftriaxon-1g-20260902",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02T16:00:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Ceftriaxon 1g x 1 lọ, tiêm tĩnh mạch chậm",
+     "dose": {
+      "value": 1,
+      "unit_raw": "lọ"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'chiều 16h' và tổng liều '2 lọ' cho cả ngày.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-metformin-500mg-20260902-sang",
+    "medication": "med-metformin-500mg",
+    "request": "mr-metformin-500mg-20260902",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Metformin 500mg x 1 viên, uống sáng sau ăn",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'sáng' và tổng liều '2 viên' cho cả ngày. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-metformin-500mg-20260902-chieu",
+    "medication": "med-metformin-500mg",
+    "request": "mr-metformin-500mg-20260902",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Metformin 500mg x 1 viên, uống chiều sau ăn",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'chiều' và tổng liều '2 viên' cho cả ngày. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-amlodipin-5mg-20260902-sang",
+    "medication": "med-amlodipin-5mg",
+    "request": "mr-amlodipin-5mg-20260902",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Amlodipin 5mg x 1 viên, uống sáng",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'sáng'. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-ceftriaxon-1g-20260903-sang",
+    "medication": "med-ceftriaxon-1g",
+    "request": "mr-ceftriaxon-1g-20260903",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-03",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Ceftriaxon 1g x 1 lọ, tiêm tĩnh mạch",
+     "dose": {
+      "value": 1,
+      "unit_raw": "lọ"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'tiếp tục Ceftriaxon 1g x 2 lọ' và tổng liều '2 lọ' cho cả ngày. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-ceftriaxon-1g-20260903-chieu",
+    "medication": "med-ceftriaxon-1g",
+    "request": "mr-ceftriaxon-1g-20260903",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-03",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Ceftriaxon 1g x 1 lọ, tiêm tĩnh mạch",
+     "dose": {
+      "value": 1,
+      "unit_raw": "lọ"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'tiếp tục Ceftriaxon 1g x 2 lọ' và tổng liều '2 lọ' cho cả ngày. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-metformin-500mg-20260903-sang",
+    "medication": "med-metformin-500mg",
+    "request": "mr-metformin-500mg-20260903",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-03",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Metformin 500mg x 1 viên, uống sáng sau ăn",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'Metformin, Amlodipin như trên' và tổng liều '2 viên' cho cả ngày. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-metformin-500mg-20260903-chieu",
+    "medication": "med-metformin-500mg",
+    "request": "mr-metformin-500mg-20260903",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-03",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Metformin 500mg x 1 viên, uống chiều sau ăn",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'Metformin, Amlodipin như trên' và tổng liều '2 viên' cho cả ngày. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "ma-amlodipin-5mg-20260903-sang",
+    "medication": "med-amlodipin-5mg",
+    "request": "mr-amlodipin-5mg-20260903",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-03",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "Amlodipin 5mg x 1 viên, uống sáng",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Suy luận từ y lệnh 'Metformin, Amlodipin như trên'. Giờ cụ thể không có trên phiếu.",
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "care_plans": [
+   {
+    "id": "cp-tho-oxy-kinh-mui-2l-phut-20260902",
+    "title": "Thở oxy kính mũi",
+    "status": "completed",
+    "intent": "order",
+    "category": [
+     {
+      "text": "Hô hấp"
+     }
+    ],
+    "period": {
+     "start": "2026-09-02T10:00:00+07:00",
+     "end": "2026-09-03T08:00:00+07:00"
+    },
+    "created": "2026-09-02T10:00:00+07:00",
+    "author": "pr-p2",
+    "description": "Thở oxy kính mũi 2 lít/phút",
+    "activities": [
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Thở oxy kính mũi",
+       "codings": []
+      },
+      "description": "Thở oxy kính mũi 2 lít/phút",
+      "status": "completed"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   },
+   {
+    "id": "cp-cham-soc-cap-ii-20260902",
+    "title": "Chăm sóc cấp II",
+    "status": "completed",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Chăm sóc điều dưỡng"
+     }
+    ],
+    "period": {
+     "start": "2026-09-02T10:00:00+07:00"
+    },
+    "created": "2026-09-02T10:00:00+07:00",
+    "author": "pr-p2",
+    "description": "Chăm sóc cấp II",
+    "activities": [
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Chăm sóc cấp II",
+       "codings": []
+      },
+      "description": "Chăm sóc cấp II",
+      "status": "completed"
+     }
+    ],
+    "sources": [
+     "doc-04"
+    ]
+   }
+  ],
+  "documents_patch": [
+   {
+    "id": "doc-04",
+    "title": "PHIẾU ĐIỀU TRỊ",
+    "date": "2026-09-02T10:00:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": [
+   "Các MedicationAdministration được suy luận từ y lệnh và tổng liều trong ngày. Giờ thực hiện cụ thể cho các thuốc uống và tiêm Ceftriaxon ngày 03/09/2026 không được ghi rõ trên phiếu, chỉ có 'sáng', 'chiều' hoặc 'như trên'.",
+   "Performer cho MedicationAdministration được gán là bác sĩ ra y lệnh (pr-p2) do không có thông tin điều dưỡng thực hiện trên phiếu. Thông thường, điều dưỡng sẽ là người thực hiện."
+  ]
+ }
+}

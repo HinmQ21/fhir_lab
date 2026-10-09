@@ -1,0 +1,115 @@
+{
+ "task": "summary:doc-06",
+ "docs": [
+  "doc-06"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "compositions": {
+   "discharge_summary": {
+    "id": "comp-discharge-summary-enc-id6",
+    "status": "final",
+    "type": {
+     "code": "18842-5",
+     "display": "Discharge summary"
+    },
+    "type_text": "BẢN TÓM TẮT HỒ SƠ BỆNH ÁN",
+    "title": "BẢN TÓM TẮT HỒ SƠ BỆNH ÁN",
+    "date": "2026-09-09",
+    "authors": [
+     "pr-p2"
+    ],
+    "custodian": "org-bvdk-phutho",
+    "confidentiality": "R",
+    "sections": [
+     {
+      "key": "diagnosis",
+      "title": "1. Chẩn đoán vào viện:",
+      "text_lines": [
+       "Viêm phổi thùy dưới phải"
+      ],
+      "entries": [
+       "cond-ad1-viem-phoi-thuy-duoi-phai"
+      ]
+     },
+     {
+      "key": "diagnosis",
+      "title": "2. Chẩn đoán ra viện:",
+      "text_lines": [
+       "Bệnh chính: Viêm phổi thùy dưới phải (J18.1)",
+       "Bệnh kèm theo: Đái tháo đường type 2 không biến chứng (E11.9); Tăng huyết áp vô căn (I10)"
+      ],
+      "entries": [
+       "cond-dd1-viem-phoi-thuy-duoi-phai",
+       "cond-cm1-dai-thao-duong-type-2-khong-bien-chung",
+       "cond-cm2-tang-huyet-ap-vo-can"
+      ]
+     },
+     {
+      "key": "hospital_course",
+      "title": "3. Tóm tắt quá trình điều trị:",
+      "text_lines": [
+       "Điều trị kháng sinh Ceftriaxon 7 ngày, kiểm soát đường huyết bằng metformin, hạ áp amlodipin.",
+       "Bệnh nhân hết sốt sau 24 giờ, giảm ho, X-quang kiểm tra cải thiện."
+      ],
+      "entries": [
+       "med-ceftriaxon-1g",
+       "med-metformin-500mg",
+       "med-amlodipin-5mg",
+       "obs-exam-04-0903-0800-x-quang-dam-mo-day-phoi-phai"
+      ]
+     },
+     {
+      "key": "discharge_summary",
+      "title": "4. Kết quả điều trị:",
+      "text_lines": [
+       "Đỡ, giảm"
+      ],
+      "entries": []
+     },
+     {
+      "key": "discharge_summary",
+      "title": "5. Tình trạng ra viện:",
+      "text_lines": [
+       "Ra viện"
+      ],
+      "entries": []
+     },
+     {
+      "key": "plan_of_care",
+      "title": "6. Hướng điều trị tiếp:",
+      "text_lines": [
+       "Tái khám sau 2 tuần tại phòng khám Nội; tiếp tục metformin và amlodipin."
+      ],
+      "entries": [
+       "med-metformin-500mg",
+       "med-amlodipin-5mg"
+      ]
+     }
+    ],
+    "sources": [
+     "doc-06"
+    ]
+   }
+  },
+  "documents_patch": [
+   {
+    "id": "doc-06",
+    "title": "BẢN TÓM TẮT HỒ SƠ BỆNH ÁN",
+    "date": "2026-09-09",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": []
+ }
+}

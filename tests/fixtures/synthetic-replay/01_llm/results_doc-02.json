@@ -1,0 +1,329 @@
+{
+ "task": "results:doc-02",
+ "docs": [
+  "doc-02"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "specimens": [
+   {
+    "id": "spc-bld-2609020045",
+    "type": {
+     "code": "BLD",
+     "text": "Máu toàn phần (EDTA)"
+    },
+    "identifiers": [
+     {
+      "type": "LOCAL",
+      "text": "Mã bệnh phẩm",
+      "value": "2609020045"
+     }
+    ],
+    "status": "available",
+    "received": "2026-09-02T09:25:00+07:00",
+    "requests": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   }
+  ],
+  "diagnostic_reports": [
+   {
+    "id": "dr-tong-phan-tich-te-bao-mau-ngoai-vi-2609020045",
+    "kind": "lab",
+    "code": {
+     "text": "TỔNG PHÂN TÍCH TẾ BÀO MÁU NGOẠI VI (bằng máy đếm laser)",
+     "codings": []
+    },
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "dept-xet-nghiem"
+    ],
+    "results_interpreter": [
+     "pr-p5"
+    ],
+    "specimen": [
+     "spc-bld-2609020045"
+    ],
+    "results": [
+     "obs-lab-huyet-hoc-2609020045-wbc",
+     "obs-lab-huyet-hoc-2609020045-neu-phan-tram",
+     "obs-lab-huyet-hoc-2609020045-lym-phan-tram",
+     "obs-lab-huyet-hoc-2609020045-rbc",
+     "obs-lab-huyet-hoc-2609020045-hgb",
+     "obs-lab-huyet-hoc-2609020045-hct",
+     "obs-lab-huyet-hoc-2609020045-plt"
+    ],
+    "presented_form": "doc-02",
+    "sources": [
+     "doc-02"
+    ]
+   }
+  ],
+  "observations": [
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-wbc",
+    "kind": "lab",
+    "code": {
+     "text": "Số lượng bạch cầu (WBC)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 15.8,
+      "unit_raw": "G/L"
+     }
+    },
+    "interpretation": [
+     "H"
+    ],
+    "reference_range": {
+     "text": "4,0 - 10,0",
+     "low": 4.0,
+     "high": 10.0
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   },
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-neu-phan-tram",
+    "kind": "lab",
+    "code": {
+     "text": "% Bạch cầu trung tính (NEU%)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 86.2,
+      "unit_raw": "%"
+     }
+    },
+    "interpretation": [
+     "H"
+    ],
+    "reference_range": {
+     "text": "45 - 75",
+     "low": 45.0,
+     "high": 75.0
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   },
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-lym-phan-tram",
+    "kind": "lab",
+    "code": {
+     "text": "% Bạch cầu lympho (LYM%)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 8.1,
+      "unit_raw": "%"
+     }
+    },
+    "interpretation": [
+     "L"
+    ],
+    "reference_range": {
+     "text": "20 - 40",
+     "low": 20.0,
+     "high": 40.0
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   },
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-rbc",
+    "kind": "lab",
+    "code": {
+     "text": "Số lượng hồng cầu (RBC)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 4.12,
+      "unit_raw": "T/L"
+     }
+    },
+    "reference_range": {
+     "text": "3,8 - 5,0",
+     "low": 3.8,
+     "high": 5.0
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   },
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-hgb",
+    "kind": "lab",
+    "code": {
+     "text": "Huyết sắc tố (HGB)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 118.0,
+      "unit_raw": "g/L"
+     }
+    },
+    "interpretation": [
+     "L"
+    ],
+    "reference_range": {
+     "text": "120 - 150",
+     "low": 120.0,
+     "high": 150.0
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   },
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-hct",
+    "kind": "lab",
+    "code": {
+     "text": "Hematocrit (HCT)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 0.36,
+      "unit_raw": "L/L"
+     }
+    },
+    "reference_range": {
+     "text": "0,35 - 0,45",
+     "low": 0.35,
+     "high": 0.45
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   },
+   {
+    "id": "obs-lab-huyet-hoc-2609020045-plt",
+    "kind": "lab",
+    "code": {
+     "text": "Số lượng tiểu cầu (PLT)",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:25:00+07:00",
+    "issued": "2026-09-02T10:05:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 265.0,
+      "unit_raw": "G/L"
+     }
+    },
+    "reference_range": {
+     "text": "150 - 400",
+     "low": 150.0,
+     "high": 400.0
+    },
+    "specimen": "spc-bld-2609020045",
+    "based_on": [
+     "sr-2-tong-phan-tich-te-bao-mau"
+    ],
+    "sources": [
+     "doc-02"
+    ]
+   }
+  ],
+  "documents_patch": [
+   {
+    "id": "doc-02",
+    "title": "KẾT QUẢ XÉT NGHIỆM HUYẾT HỌC",
+    "date": "2026-09-02T10:05:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p4",
+     "pr-p5"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": []
+ }
+}

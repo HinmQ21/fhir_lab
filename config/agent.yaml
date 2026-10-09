@@ -1,0 +1,102 @@
+# Cấu hình harness fhir_agent (python -m fhir_agent ...)
+# Khoá API đọc từ .env (biến ${TÊN}); không ghi khoá thật vào file này.
+env_file: .env
+default_provider: glm
+
+# privacy:
+#   none          endpoint nội bộ / on-prem: gửi nguyên văn hồ sơ
+#   pseudonymize  dịch vụ cloud: che họ tên, CCCD, BHYT, SĐT, ngày sinh, địa chỉ chi tiết bằng token trước khi gửi,
+#                 khôi phục sau khi nhận; bắt buộc thêm --allow-cloud (PDPL 2023)
+#   block         cấm gửi hồ sơ (chỉ dùng cho ping)
+providers:
+  glm:                                  # API nội bộ, OpenAI-compatible
+    kind: openai_compat
+    base_url: ${GLM53FLASH_URL}         # chấp nhận gốc, .../v1 hoặc .../v1/chat/completions
+    api_key: ${GLM53FLASH_API_KEY}
+    model: ${GLM53FLASH_MODEL_NAME}
+    privacy: none
+    json_mode: true
+    extra_body: {chat_template_kwargs: {enable_thinking: false}}
+    max_tokens: 32000
+    timeout: 900
+    concurrency: 6
+
+  gemini:                               # Google AI Studio, API generateContent gốc
+    kind: gemini
+    base_url: https://generativelanguage.googleapis.com/v1beta
+    api_key: ${GEMINI_API_KEY}
+    model: gemini-3.5-flash
+    fallback_models: [gemini-3.8-flash, gemini-flash-latest, gemini-2.5-flash, gemini-2.5-flash-lite]
+    privacy: pseudonymize
+    json_mode: true
+    max_tokens: 48000                   # gồm cả token suy nghĩ
+    generation_config: {thinkingConfig: {thinkingBudget: 2048}}
+    concurrency: 4
+    price_in: 0.30                      # USD / 1M token (ước tính, chỉnh theo bảng giá)
+    price_out: 2.50
+
+  gemini-openai:                        # Gemini qua lớp OpenAI-compatible
+    kind: openai_compat
+    base_url: https://generativelanguage.googleapis.com/v1beta/openai
+    api_key: ${GEMINI_API_KEY}
+    model: gemini-3.5-flash
+    fallback_models: [gemini-2.5-flash]
+    privacy: pseudonymize
+    json_mode: true
+    max_tokens: 48000
+    concurrency: 4
+
+  haiku:                                # Claude Haiku 5.5 qua Anthropic Messages API gốc (cloud)
+    kind: anthropic
+    base_url: https://api.anthropic.com
+    api_key: ${CLAUDE_API_KEY}
+    model: claude-haiku-5-5
+    privacy: pseudonymize
+    max_tokens: 32000
+    timeout: 600
+    concurrency: 4
+
+  sonnet:                               # Claude Sonnet 5.5 qua Anthropic Messages API gốc (cloud)
+    kind: anthropic
+    base_url: https://api.anthropic.com
+    api_key: ${CLAUDE_API_KEY}
+    model: claude-sonnet-5-5
+    privacy: pseudonymize
+    max_tokens: 32000
+    timeout: 900
+    concurrency: 4
+
+  openai:                               # OpenAI hoặc bất kỳ endpoint tương thích nào (vLLM, Ollama, LM Studio, OpenRouter…)
+    kind: openai_compat
+    base_url: ${OPENAI_BASE_URL:-https://api.openai.com/v1}
+    api_key: ${OPENAI_API_KEY}
+    model: ${OPENAI_MODEL:-gpt-5-mini}
+    privacy: pseudonymize
+    json_mode: true
+    max_tokens: 32000
+    concurrency: 4
+
+  mock:                                 # kiểm thử offline: phản hồi lấy từ fixtures/<task>.json
+    kind: mock
+    model: mock
+    privacy: none
+
+# Những gì KHÔNG in trên phiếu (giống config/pipeline.yaml)
+facility:
+  organization: org-bvdk-phutho
+  name: Bệnh viện Đa khoa tỉnh Phú Thọ
+  ma_cskcb: null                        # mã CSKCB 5 ký tự (QĐ BYT) — dùng khi phiếu không in; null = chỉ lấy từ phiếu
+  base_url: http://his.bvdk-phutho.vn/fhir
+  mrn_system: http://his.bvdk-phutho.vn/sid/mrn
+  staff_system: http://his.bvdk-phutho.vn/sid/staff-id
+  order_system: http://his.bvdk-phutho.vn/sid/y-lenh
+
+paths:
+  skill: vn-fhir/skills/vn-fhir-convert
+  vendor: vendor
+  runs: runs/agent
+  cache: runs/agent/_cache
+
+quality:
+  repair_rounds: 2                      # số vòng sửa tối đa cho mỗi cổng
+  repair_max_resources: 40              # số resource lỗi tối đa gửi sửa mỗi vòng

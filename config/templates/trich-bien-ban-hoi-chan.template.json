@@ -1,0 +1,41 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên đầy đủ của Sở Y tế ở đầu biểu mẫu.",
+    "Bệnh viện": "Tên đầy đủ của bệnh viện ở đầu biểu mẫu.",
+    "Khoa": "Tên khoa tiếp nhận, điều trị hoặc thực hiện dịch vụ trên phiếu.",
+    "Quốc hiệu": "Quốc hiệu in ở giữa phần đầu biểu mẫu; giữ nguyên chữ in hoa.",
+    "Tiêu ngữ": "Tiêu ngữ in ngay dưới quốc hiệu; giữ nguyên dấu gạch nối.",
+    "Tên phiếu": "Tiêu đề đầy đủ của biểu mẫu, gồm cả số thứ tự trong ngoặc nếu có.",
+    "Mã số": "Giá trị sau nhãn 'MS' ở góc trên bên phải; giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Số vào viện": "Giá trị sau nhãn 'Số Vào viện' ở góc trên bên phải; giữ nguyên ký tự và số 0 ở đầu."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Họ và tên người bệnh": "Họ và tên đầy đủ của người bệnh đúng như trên biểu mẫu.",
+    "Tuổi": "Tuổi của người bệnh in sau nhãn 'Tuổi'; chỉ lấy phần giá trị, không gồm nhãn.",
+    "Giới tính": "Giá trị giới tính đúng như trên phiếu.",
+    "Đã điều trị từ ngày": "Đã điều trị từ ngày đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Đến ngày": "Đến ngày đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Tại số giường": "Số giường tại mục 'Tại số giường'; null nếu để trống.",
+    "Buồng": "Buồng đúng như trên biểu mẫu; null nếu không có thông tin.",
+    "Hội chẩn lúc": "Hội chẩn lúc đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Chẩn đoán": "Nội dung sau nhãn 'Chẩn đoán'; giữ nguyên văn cả chữ viết tắt, dấu câu và khoảng trắng; chỉ lấy phần in trên phiếu.",
+    "Khoa": "Nội dung sau nhãn 'Khoa' trên cùng dòng với 'Chẩn đoán'; giữ nguyên văn.",
+    "Chủ tọa": "Chủ tọa đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Thư ký": "Thư ký đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Thành viên tham gia": "Thành viên tham gia đúng như trên biểu mẫu; null nếu không có thông tin."
+  },
+  "Tóm tắt quá trình diễn biến bệnh, quá trình điều trị và chăm sóc người bệnh": [
+    "Một dòng nội dung trong phần tóm tắt; giữ nguyên thứ tự và dấu câu theo PDF."
+  ],
+  "Kết luận (Sau khi đã khám lại và thảo luận)": "Nội dung kết luận hội chẩn in dưới nhãn 'Kết luận: (Sau khi đã khám lại và thảo luận)'; giữ nguyên văn; null nếu để trống.",
+  "Hướng điều trị tiếp": "Nội dung in dưới nhãn 'Hướng điều trị tiếp'; giữ nguyên văn cả khoảng trắng và dấu câu; null nếu để trống.",
+  "Ngày lập biên bản": "Dòng ngày tháng năm in phía trên khối chữ ký (không có nhãn in riêng, khoá tự đặt); giữ nguyên văn cả các chữ 'Ngày', 'tháng', 'năm'.",
+  "XÁC NHẬN KÝ": [
+    {
+      "Vai trò": "Tiêu đề vai trò in đậm của khối xác nhận (THƯ KÝ, CÁC THÀNH VIÊN hoặc CHỦ TỌA).",
+      "Người ký": "Nội dung sau nhãn 'Người Ký' trong khối chữ ký số in dưới hình chữ ký của khối xác nhận tương ứng; nối dòng bị ngắt bằng một dấu cách; null nếu khối không có chữ ký số.",
+      "Chức danh": "Nội dung sau nhãn 'Chức danh' trong khối chữ ký số của khối xác nhận tương ứng; null nếu không có.",
+      "Họ tên": "Họ tên in ở cuối khối xác nhận tương ứng; null nếu để trống."
+    }
+  ]
+}

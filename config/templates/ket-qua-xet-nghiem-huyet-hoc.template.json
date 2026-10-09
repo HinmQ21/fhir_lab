@@ -1,0 +1,58 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên đầy đủ của Sở Y tế ở đầu biểu mẫu.",
+    "Bệnh viện": "Tên đầy đủ của bệnh viện ở đầu biểu mẫu.",
+    "Trung tâm": "Trung tâm đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Khoa": "Tên khoa tiếp nhận, điều trị hoặc thực hiện dịch vụ trên phiếu.",
+    "Mã": "Mã người bệnh in dưới mã vạch ở góc trên bên phải (không có nhãn in; cũng in lại ở chân trang sau họ tên); giữ nguyên chữ cái, chữ số và số 0 ở đầu.",
+    "Tên phiếu": "Tiêu đề đầy đủ của biểu mẫu, gồm cả số thứ tự trong ngoặc nếu có.",
+    "Mã bệnh phẩm": "Mã bệnh phẩm; giữ nguyên chữ cái, chữ số và số 0 ở đầu.",
+    "Phân loại": {
+      "Thường": "Ô 'Thường' trong mục 'Phân loại': true nếu được chọn, false nếu không.",
+      "Cấp cứu": "Ô 'Cấp cứu' trong mục 'Phân loại': true nếu được chọn, false nếu không."
+    }
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Họ và tên": "Họ và tên đầy đủ của người tương ứng trong đúng mục hiện tại.",
+    "Giới tính": "Giá trị giới tính đúng như trên phiếu.",
+    "Năm sinh": "Năm sinh của người bệnh; giữ nguyên đủ bốn chữ số.",
+    "Nghề nghiệp": "Nghề nghiệp của người bệnh.",
+    "Dân tộc": "Dân tộc của người bệnh.",
+    "Địa chỉ": "Địa chỉ đầy đủ đúng như trên biểu mẫu.",
+    "Cơ quan": "Cơ quan đúng như trên biểu mẫu; null nếu không có thông tin.",
+    "Khoa phòng": "Khoa phòng đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Chẩn đoán": "Nội dung sau nhãn 'Chẩn đoán'; giữ nguyên văn cả lỗi chính tả, dấu câu và khoảng trắng như bản in, nối các dòng bị ngắt do hết chiều rộng bằng một dấu cách."
+  },
+  "THÔNG TIN MẪU": {
+    "Người lấy mẫu": "Họ tên hoặc thông tin người lấy mẫu đúng như trên biểu mẫu, không suy diễn phần không được ghi.",
+    "Người nhận mẫu": "Họ tên hoặc thông tin người nhận mẫu đúng như trên biểu mẫu, không suy diễn phần không được ghi.",
+    "Thời gian lấy mẫu": "Thời gian lấy mẫu đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Thời gian nhận mẫu": "Thời gian nhận mẫu đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Loại mẫu": "Loại mẫu đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Tình trạng mẫu": "Tình trạng mẫu đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có."
+  },
+  "KẾT QUẢ XÉT NGHIỆM": [
+    {
+      "Tên nhóm xét nghiệm": "Tên nhóm xét nghiệm chứa các chỉ số ở mục hiện tại.",
+      "Chi tiết": [
+        {
+          "Tên xét nghiệm": "Tên xét nghiệm hoặc chỉ số xét nghiệm của dòng tương ứng.",
+          "Đánh dấu": "Ký hiệu cảnh báo cao/thấp in ở cột KẾT QUẢ trước giá trị; null nếu không có.",
+          "KẾT QUẢ": "Giá trị kết quả của dòng tương ứng, giữ nguyên số và ký hiệu; null nếu ô trống.",
+          "Đơn vị tính": "Đơn vị ở cột 'ĐVT' của dòng tương ứng; null nếu ô trống.",
+          "Giá trị BT": "Khoảng giá trị bình thường/tham chiếu; giữ nguyên dấu ngoặc, dấu phân cách và khoảng trắng; nếu ô in nhiều dòng (ví dụ theo giới) thì nối bằng '\\n'; null nếu ô trống.",
+          "Ghi chú": "Nội dung cột 'Ghi Chú' của dòng tương ứng; null nếu ô trống.",
+          "Quy trình": "Mã quy trình kỹ thuật ở cột 'Quy trình' của dòng tương ứng; giữ nguyên toàn bộ ký tự; null nếu ô trống."
+        }
+      ]
+    }
+  ],
+  "Nhận xét": "Nội dung sau nhãn 'Nhận xét' dưới bảng kết quả; null nếu để trống.",
+  "XÁC NHẬN KÝ": [
+    {
+      "Vai trò": "Vai trò hoặc chức danh của người ký trong đúng khối xác nhận.",
+      "Thời gian": "Thời điểm in phía trên vai trò trong đúng khối xác nhận; giữ nguyên giờ, phút và ngày như trên phiếu; null nếu không được ghi.",
+      "Họ tên": "Họ và tên đầy đủ của người tương ứng trong đúng mục hiện tại."
+    }
+  ]
+}

@@ -1,0 +1,373 @@
+{
+ "task": "observe:doc-05",
+ "docs": [
+  "doc-05"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "observations": [
+   {
+    "id": "obs-vs-05-0902-1400-mach",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Mạch",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T14:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 98.0,
+      "unit_raw": "l/p"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-1400-nhiet-do",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhiệt độ",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T14:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 38.2,
+      "unit_raw": "°C"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-1400-huyet-ap",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Huyết áp",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T14:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "components": [
+     {
+      "code": {
+       "text": "Huyết áp tâm thu",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 140.0,
+        "unit_raw": "mmHg"
+       }
+      }
+     },
+     {
+      "code": {
+       "text": "Huyết áp tâm trương",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 80.0,
+        "unit_raw": "mmHg"
+       }
+      }
+     }
+    ],
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-1400-nhip-tho",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhịp thở",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T14:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 22.0,
+      "unit_raw": "l/p"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-1400-spo2",
+    "kind": "vital-sign",
+    "code": {
+     "text": "SpO2",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T14:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 95.0,
+      "unit_raw": "%"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-2000-mach",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Mạch",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T20:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 92.0,
+      "unit_raw": "l/p"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-2000-nhiet-do",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhiệt độ",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T20:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 37.8,
+      "unit_raw": "°C"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-2000-huyet-ap",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Huyết áp",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T20:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "components": [
+     {
+      "code": {
+       "text": "Huyết áp tâm thu",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 135.0,
+        "unit_raw": "mmHg"
+       }
+      }
+     },
+     {
+      "code": {
+       "text": "Huyết áp tâm trương",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 80.0,
+        "unit_raw": "mmHg"
+       }
+      }
+     }
+    ],
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-vs-05-0902-2000-spo2",
+    "kind": "vital-sign",
+    "code": {
+     "text": "SpO2",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T20:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 95.0,
+      "unit_raw": "%"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   },
+   {
+    "id": "obs-exam-05-0902-2000-glucose-mao-mach",
+    "kind": "exam",
+    "code": {
+     "text": "Glucose mao mạch",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T20:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "value": {
+     "quantity": {
+      "value": 9.6,
+      "unit_raw": "mmol/L"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   }
+  ],
+  "medication_administrations": [
+   {
+    "id": "ma-ceftriaxon-1g-20260902-1400",
+    "medication": "med-ceftriaxon-1g",
+    "request": "mr-ceftriaxon-1g-20260902",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02T14:00:00+07:00",
+    "performer": [
+     "pr-p6"
+    ],
+    "dosage": {
+     "text": "Tiêm Ceftriaxon 1g tĩnh mạch chậm",
+     "route": {
+      "text": "tĩnh mạch chậm"
+     },
+     "dose": {
+      "value": 1.0,
+      "unit_raw": "g"
+     }
+    },
+    "sources": [
+     "doc-05"
+    ]
+   }
+  ],
+  "care_plans": [
+   {
+    "id": "cp-cham-soc-05-0902",
+    "title": "Kế hoạch chăm sóc điều dưỡng",
+    "status": "active",
+    "intent": "plan",
+    "category": [
+     {
+      "text": "Chăm sóc điều dưỡng"
+     }
+    ],
+    "period": {
+     "start": "2026-09-02T14:00:00+07:00"
+    },
+    "created": "2026-09-02T14:00:00+07:00",
+    "author": "pr-p6",
+    "addresses": [
+     "cond-ad1-viem-phoi-thuy-duoi-phai"
+    ],
+    "description": "Chẩn đoán: Viêm phổi thùy dưới phải",
+    "activities": [
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Thở oxy",
+       "codings": []
+      },
+      "description": "Thở oxy 2 lít/phút",
+      "status": "completed",
+      "scheduled_text": "14:00 02/09/2026"
+     },
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Hướng dẫn ho khạc đờm",
+       "codings": []
+      },
+      "description": "Hướng dẫn ho khạc đờm",
+      "status": "completed",
+      "scheduled_text": "14:00 02/09/2026"
+     },
+     {
+      "kind": "ServiceRequest",
+      "code": {
+       "text": "Theo dõi dấu hiệu sinh tồn",
+       "codings": []
+      },
+      "description": "Theo dõi dấu hiệu sinh tồn",
+      "status": "completed",
+      "scheduled_text": "20:00 02/09/2026"
+     }
+    ],
+    "sources": [
+     "doc-05"
+    ]
+   }
+  ],
+  "documents_patch": [
+   {
+    "id": "doc-05",
+    "title": "PHIẾU CHĂM SÓC (Cấp II)",
+    "date": "2026-09-02",
+    "extracted": true,
+    "authors": [
+     "pr-p6"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": []
+ }
+}

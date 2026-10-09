@@ -1,0 +1,310 @@
+{
+ "task": "observe:doc-01",
+ "docs": [
+  "doc-01"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "observations": [
+   {
+    "id": "obs-vs-01-0902-0830-mach",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Mạch",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 102.0,
+      "unit_raw": "lần/phút"
+     }
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-vs-01-0902-0830-nhiet-do",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhiệt độ",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 38.6,
+      "unit_raw": "°C"
+     }
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-vs-01-0902-0830-huyet-ap",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Huyết áp",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "components": [
+     {
+      "code": {
+       "text": "Huyết áp tâm thu",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 145.0,
+        "unit_raw": "mmHg"
+       }
+      }
+     },
+     {
+      "code": {
+       "text": "Huyết áp tâm trương",
+       "codings": []
+      },
+      "value": {
+       "quantity": {
+        "value": 85.0,
+        "unit_raw": "mmHg"
+       }
+      }
+     }
+    ],
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-vs-01-0902-0830-nhip-tho",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Nhịp thở",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 24.0,
+      "unit_raw": "lần/phút"
+     }
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-vs-01-0902-0830-spo2",
+    "kind": "vital-sign",
+    "code": {
+     "text": "SpO2",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 93.0,
+      "unit_raw": "%"
+     }
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-vs-01-0902-0830-can-nang",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Cân nặng",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 56.0,
+      "unit_raw": "kg"
+     }
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-vs-01-0902-0830-chieu-cao",
+    "kind": "vital-sign",
+    "code": {
+     "text": "Chiều cao",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "quantity": {
+      "value": 152.0,
+      "unit_raw": "cm"
+     }
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-exam-01-0902-0830-toan-than",
+    "kind": "exam",
+    "code": {
+     "text": "Toàn thân",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "string": "Tỉnh, tiếp xúc tốt. Da niêm mạc hồng. Không phù."
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-exam-01-0902-0830-ho-hap",
+    "kind": "exam",
+    "code": {
+     "text": "Hô hấp",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "string": "Ran nổ đáy phổi phải. Rì rào phế nang giảm đáy phải."
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-exam-01-0902-0830-tuan-hoan",
+    "kind": "exam",
+    "code": {
+     "text": "Tuần hoàn",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "string": "Tim đều, T1 T2 rõ, không tiếng thổi."
+    },
+    "sources": [
+     "doc-01"
+    ]
+   },
+   {
+    "id": "obs-exam-01-0902-0830-tieu-hoa",
+    "kind": "exam",
+    "code": {
+     "text": "Tiêu hóa",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "value": {
+     "string": "Bụng mềm, gan lách không sờ thấy."
+    },
+    "sources": [
+     "doc-01"
+    ]
+   }
+  ],
+  "medication_administrations": [
+   {
+    "id": "ma-paracetamol-500mg-20260902-0830",
+    "medication": "med-paracetamol-500mg",
+    "status": "completed",
+    "category": "inpatient",
+    "effective": "2026-09-02T08:30:00+07:00",
+    "performer": [
+     "pr-p2"
+    ],
+    "dosage": {
+     "text": "1 viên uống",
+     "route": {
+      "text": "Uống"
+     },
+     "dose": {
+      "value": 1.0,
+      "unit_raw": "viên"
+     }
+    },
+    "note": "Ghi nhận trong mục 'ĐÃ XỬ LÝ' của phiếu khám bệnh vào viện.",
+    "sources": [
+     "doc-01"
+    ]
+   }
+  ],
+  "care_plans": [],
+  "documents_patch": [
+   {
+    "id": "doc-01",
+    "title": "PHIẾU KHÁM BỆNH VÀO VIỆN",
+    "date": "2026-09-02",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": [
+   "Thời gian thực hiện các chỉ số sinh hiệu, khám xét và thực hiện thuốc Paracetamol được suy luận từ thời gian \"Đến khám lúc: 08 giờ 30 phút ngày 02/09/2026\" trên phiếu.",
+   "Medication id `med-paracetamol-500mg` được tạo mới vì không có trong REGISTRY."
+  ]
+ }
+}

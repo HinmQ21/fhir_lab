@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "vn-terminology": {
+      "command": "python",
+      "args": ["-I", "${CLAUDE_PLUGIN_ROOT}/skills/vn-fhir-convert/scripts/term_server.py"],
+      "env": {"VN_FHIR_VENDOR": "${VN_FHIR_VENDOR}"},
+      "description": "Tra cứu danh mục mã offline (ICD-10 VN, CLS QĐ 1227, LOINC curated/NLM, UCUM, CodeSystem/ValueSet VN Core) — cùng engine với scripts/term_lookup.py. Cần `pip install mcp`; không có thì dùng CLI term_lookup.py."
+    }
+  }
+}

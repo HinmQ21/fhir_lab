@@ -1,0 +1,38 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Dòng tên Sở Y tế in ở đầu phiếu; chuỗi đúng như bản in.",
+    "Bệnh viện": "Dòng tên bệnh viện in ở đầu phiếu (dưới Sở Y tế); chuỗi đúng như bản in.",
+    "Tên phiếu": "Tiêu đề phiếu in hoa ở giữa đầu trang (ví dụ 'PHIẾU SIÊU ÂM'); chuỗi đúng như bản in.",
+    "Tên kỹ thuật": "Dòng in ngay dưới tiêu đề phiếu ghi tên kỹ thuật siêu âm (ví dụ 'Doppler động mạch cảnh', 'Siêu âm doppler xuyên sọ'); chuỗi đúng như bản in.",
+    "Mã số": "Mã số biểu mẫu in sau nhãn 'MS:' ở góc phải trên phiếu; chuỗi, giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Mã phiếu": "Giá trị sau nhãn 'Mã phiếu:' ở góc phải trên phiếu; null nếu để trống.",
+    "Mã bệnh nhân": "Mã bệnh nhân in sau nhãn 'Mã BN:' ở góc phải trên phiếu; chuỗi, giữ nguyên chữ cái, chữ số và số 0 ở đầu."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Tên bệnh nhân": "Họ và tên người bệnh in sau nhãn 'Tên bệnh nhân:'; chuỗi giữ nguyên chữ hoa như bản in.",
+    "Tuổi": "Số tuổi in sau nhãn 'Tuổi:'; chuỗi, chỉ ghi phần giá trị.",
+    "Giới tính": "Giá trị sau nhãn 'Giới tính:'; chuỗi đúng như bản in.",
+    "Địa chỉ": "Nội dung sau nhãn 'Địa chỉ:'; chuỗi giữ nguyên văn; null nếu trống.",
+    "Khoa": "Nội dung sau nhãn 'Khoa:' (tên khoa, kèm tên buồng nếu in cùng dòng); chuỗi giữ nguyên văn; null nếu trống.",
+    "Chẩn đoán": "Nội dung sau nhãn 'Chẩn đoán:'; chuỗi giữ nguyên văn; null nếu trống.",
+    "Yêu cầu kiểm tra": "Nội dung sau nhãn 'Yêu cầu kiểm tra:' (tên kỹ thuật được chỉ định); chuỗi giữ nguyên văn; null nếu trống."
+  },
+  "KẾT QUẢ": {
+    "Mô tả": [
+      {
+        "Vị trí": "Tên vùng/bên khảo sát in đậm hoặc có dấu '*' (ví dụ 'Bên phải', 'Bên trái', 'Não giữa', 'Não trước', 'Não sau'); chuỗi đúng như bản in.",
+        "Nhận xét": [
+          "Mỗi dòng nhận xét thuộc vùng/bên tương ứng là một phần tử chuỗi, theo đúng thứ tự in; dòng ngắt do hết lề nối bằng một dấu cách."
+        ]
+      }
+    ],
+    "Kết luận": "Nội dung sau nhãn 'Kết luận:' (in nghiêng, cuối phần kết quả); chuỗi đúng như bản in, không tự thêm dấu chấm."
+  },
+  "XÁC NHẬN KÝ": [
+    {
+      "Vai trò": "Chức danh in đậm của khối ký (BÁC SĨ ĐIỀU TRỊ hoặc BÁC SĨ CHUYÊN KHOA); chuỗi đúng như bản in.",
+      "Thời gian": "Thời điểm in nghiêng phía trên chức danh của khối ký (dạng giờ 'h' phút và ngày); chuỗi giữ nguyên; null nếu không in.",
+      "Họ tên": "Khối tên in dưới chữ ký của khối này (gồm học hàm/chức danh viết tắt); chuỗi; null nếu trống."
+    }
+  ]
+}

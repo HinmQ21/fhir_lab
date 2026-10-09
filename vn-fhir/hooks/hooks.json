@@ -1,0 +1,17 @@
+{
+  "description": "vn-fhir: tự chạy validator VN Core mỗi khi Claude ghi/sửa một tệp JSON FHIR (resourceType hoặc *.fhir.json). Có lỗi => exit 2, danh sách lỗi được đưa vào ngữ cảnh để sửa ngay. Tắt tạm: VN_FHIR_HOOK=off. Vendor: VN_FHIR_VENDOR hoặc <cwd>/vendor.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -I \"${CLAUDE_PLUGIN_ROOT}/skills/vn-fhir-convert/scripts/hook_validate.py\"",
+            "timeout": 120
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://fhir.hl7.org.vn/vn-fhir-convert/clinical.schema.json",
+  "title": "Clinical JSON v2 — lớp trung gian giữa hồ sơ bệnh án (TT 32/2023) và FHIR R4 VN Core 0.10.0",
+  "description": "Mọi resource lâm sàng phải có `id` (ổn định, dùng làm FHIR id), `sources` (id tài liệu gốc) và mã hoá dạng {text, codings[]} với codings đã qua tra cứu (source/verified). Không bịa mã: codings rỗng + text nguyên văn là hợp lệ.",
+  "type": "object",
+  "required": ["meta", "documents", "organizations", "practitioners", "patient", "encounter", "conditions", "observations"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["schema_version", "vncore_version", "case_id", "created", "created_by", "facility"],
+      "properties": {
+        "schema_version": {"type": "string", "pattern": "^2\\.[0-9]+$"},
+        "vncore_version": {"type": "string"},
+        "case_id": {"type": "string", "minLength": 1},
+        "created": {"$ref": "#/$defs/dateTime"},
+        "created_by": {"type": "string"},
+        "status": {"enum": ["draft", "extracted", "reviewed", "ground-truth"]},
+        "facility": {
+          "type": "object",
+          "required": ["organization", "base_url", "mrn_system"],
+          "properties": {
+            "organization": {"$ref": "#/$defs/id"},
+            "name": {"type": "string"},
+            "base_url": {"type": "string", "format": "uri"},
+            "mrn_system": {"type": "string", "format": "uri"},
+            "staff_system": {"type": "string", "format": "uri"},
+            "order_system": {"type": "string", "format": "uri"}
+          }
+        },
+        "source_archive": {"type": "object"}
+      }
+    },
+    "documents": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "seq", "file", "form", "title", "date", "extracted"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "seq": {"type": "integer", "minimum": 1},
+          "file": {"type": "string"},
+          "form": {"type": "string"},
+          "title": {"type": "string"},
+          "type": {"type": "object", "required": ["code"], "properties": {"code": {"$ref": "#/$defs/loinc"}, "display": {"type": "string"}}},
+          "date": {"$ref": "#/$defs/dateOrDateTime"},
+          "pages": {"type": "integer", "minimum": 0},
+          "size_bytes": {"type": "integer", "minimum": 0},
+          "sha1_b64": {"type": "string"},
+          "content_type": {"type": "string"},
+          "extracted": {"type": "boolean"},
+          "authors": {"type": "array", "items": {"$ref": "#/$defs/id"}},
+          "author_org": {"$ref": "#/$defs/id"},
+          "note": {"type": ["string", "null"]}
+        }
+      }
+    },
+    "organizations": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "kind", "name", "sources"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "kind": {"enum": ["facility", "department", "payer", "other"]},
+          "name": {"type": "string", "minLength": 1},
+          "aliases": {"type": "array", "items": {"type": "string"}},
+          "identifiers": {"type": "array", "items": {"$ref": "#/$defs/identifier"}},
+          "department_code": {"type": "string", "description": "mã vn-department-cs (Kxx)"},
+          "local_code": {"type": "string", "description": "mã khoa cục bộ in trên hồ sơ — chỉ ghi khi thật sự in"},
+          "part_of": {"$ref": "#/$defs/id"},
+          "org_type": {"type": "string"}, "org_level": {"type": "string"}, "facility_care_level": {"type": "string"}, "rank_status": {"type": "string"},
+          "address": {"$ref": "#/$defs/address"},
+          "telecom": {"type": "array", "items": {"type": "object", "required": ["system", "value"]}},
+          "sources": {"$ref": "#/$defs/sources"}
+        }
+      }
+    },
+    "locations": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "name", "kind", "sources"],
+        "properties": {"id": {"$ref": "#/$defs/id"}, "name": {"type": "string"}, "kind": {"enum": ["clinic", "ward", "bed", "room", "building", "site", "other"]},
+          "local_code": {"type": "string"}, "managing_organization": {"$ref": "#/$defs/id"}, "part_of": {"$ref": "#/$defs/id"}, "sources": {"$ref": "#/$defs/sources"}}
+      }
+    },
+    "practitioners": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "name", "sources"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"},
+          "name_raw": {"type": "string"},
+          "name": {"$ref": "#/$defs/humanName"},
+          "qualifications": {"type": "array", "items": {"type": "string", "description": "mã vn-qualification-cs"}},
+          "identifiers": {"type": "array", "items": {"$ref": "#/$defs/identifier"}},
+          "roles": {"type": "array", "items": {"type": "object", "required": ["organization"], "properties": {
+            "id": {"$ref": "#/$defs/id"}, "organization": {"$ref": "#/$defs/id"}, "title_code": {"type": "string"}, "title_text": {"type": "string"},
+            "specialty": {"type": "array", "items": {"type": "string"}}, "location": {"type": ["string", "null"]}, "period": {"$ref": "#/$defs/period"}}}},
+          "sources": {"$ref": "#/$defs/sources"}
+        }
+      }
+    },
+    "patient": {
+      "type": "object",
+      "required": ["id", "name", "gender", "identifiers", "sources"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "name": {"$ref": "#/$defs/humanName"},
+        "name_raw": {"type": "string"},
+        "gender": {"enum": ["male", "female", "other", "unknown"]},
+        "birth_date": {"$ref": "#/$defs/date"},
+        "identifiers": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/identifier"}},
+        "ethnicity": {"type": "object", "properties": {"code": {"type": "string"}, "text": {"type": "string"}}},
+        "occupation": {"type": "object", "properties": {"code": {"type": "string"}, "text": {"type": "string"}}},
+        "nationality": {"type": "object", "properties": {"code": {"type": "string", "pattern": "^[A-Z]{2}$"}, "text": {"type": "string"}}},
+        "address": {"$ref": "#/$defs/address"},
+        "contacts": {"type": "array"},
+        "managing_organization": {"$ref": "#/$defs/id"},
+        "sources": {"$ref": "#/$defs/sources"}
+      }
+    },
+    "coverage": {
+      "type": ["object", "null"],
+      "required": ["id", "bhyt_number", "sources"],
+      "properties": {"id": {"$ref": "#/$defs/id"}, "bhyt_number": {"type": "string", "pattern": "^[A-Z]{2}[0-9]{13}$"}, "card_type": {"type": "object"}, "period": {"$ref": "#/$defs/period"},
+        "benefit_level": {"type": "number", "minimum": 0, "maximum": 100}, "primary_care_facility": {"$ref": "#/$defs/id"}, "payor": {"type": "string"}, "status": {"type": "string"}, "sources": {"$ref": "#/$defs/sources"}}
+    },
+    "encounter": {
+      "type": "object",
+      "required": ["id", "identifiers", "status", "class", "period", "service_provider", "sources"],
+      "properties": {
+        "id": {"$ref": "#/$defs/id"},
+        "identifiers": {"type": "array", "items": {"$ref": "#/$defs/identifier"}},
+        "status": {"enum": ["planned", "arrived", "triaged", "in-progress", "onleave", "finished", "cancelled", "unknown"]},
+        "class": {"enum": ["IMP", "AMB", "EMER", "OBSENC", "HH", "VR", "SS", "ACUTE", "NONAC", "PRENC"]},
+        "type": {"type": "object", "properties": {"code": {"type": "string"}, "text": {"type": "string"}}},
+        "period": {"$ref": "#/$defs/period"},
+        "reason_text": {"type": "string"},
+        "service_provider": {"$ref": "#/$defs/id"},
+        "department": {"$ref": "#/$defs/id"},
+        "locations": {"type": "array", "items": {"type": "object", "required": ["location"]}},
+        "participants": {"type": "array", "items": {"type": "object", "required": ["individual", "type"], "properties": {"type": {"enum": ["ADM", "ATND", "CALLBCK", "CON", "DIS", "ESC", "REF", "SPRF", "PPRF", "PART", "translator", "emergency"]}}}},
+        "referral_mode": {"type": "string"}, "treatment_outcome": {"type": "string"}, "discharge_disposition": {"type": "string"}, "payment_method": {"type": "string"}, "insurance_visit_type": {"type": "string"},
+        "length_days": {"type": "integer", "minimum": 0},
+        "diagnoses": {"type": "array", "items": {"type": "object", "required": ["condition", "use"], "properties": {"use": {"enum": ["AD", "DD", "CC", "CM", "pre-op", "post-op", "billing"]}, "rank": {"type": "integer", "minimum": 1}}}},
+        "account": {"$ref": "#/$defs/id"},
+        "sources": {"$ref": "#/$defs/sources"}
+      }
+    },
+    "conditions": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "text", "code", "verification_status", "recorded_date", "sources"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"}, "role": {"enum": ["admission", "discharge", "comorbidity", "complication", "chief-complaint", "problem", "other"]}, "rank": {"type": "integer"},
+          "text": {"type": "string", "minLength": 1}, "code": {"$ref": "#/$defs/codeable"},
+          "clinical_status": {"enum": ["active", "recurrence", "relapse", "inactive", "remission", "resolved"]},
+          "verification_status": {"enum": ["unconfirmed", "provisional", "differential", "confirmed", "refuted", "entered-in-error"]},
+          "onset": {"$ref": "#/$defs/dateOrDateTime"}, "recorded_date": {"$ref": "#/$defs/dateOrDateTime"}, "recorder": {"$ref": "#/$defs/id"}, "asserter": {"$ref": "#/$defs/id"},
+          "note": {"type": "string"}, "candidates": {"type": "array"}, "sources": {"$ref": "#/$defs/sources"}
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object", "required": ["id", "kind", "code", "status", "effective", "sources"],
+        "properties": {
+          "id": {"$ref": "#/$defs/id"}, "kind": {"enum": ["vital-sign", "lab", "exam", "survey", "imaging", "procedure", "social-history", "activity", "therapy"]},
+          "code": {"$ref": "#/$defs/codeable"}, "status": {"enum": ["registered", "preliminary", "final", "amended", "corrected", "cancelled", "entered-in-error", "unknown"]},
+          "effective": {"$ref": "#/$defs/dateOrDateTime"}, "issued": {"$ref": "#/$defs/dateTime"},
+          "performer": {"type": "array", "items": {"$ref": "#/$defs/id"}},
+          "value": {"$ref": "#/$defs/value"},
+          "components": {"type": "array", "items": {"type": "object", "required": ["code", "value"], "properties": {"code": {"$ref": "#/$defs/codeable"}, "value": {"$ref": "#/$defs/value"}}}},
+          "interpretation": {"type": "array", "items": {"enum": ["H", "L", "N", "A", "AA", "HH", "LL", "POS", "NEG", "IND", "<", ">"]}},
+          "reference_range": {"type": "object", "properties": {"low": {"type": "number"}, "high": {"type": "number"}, "unit": {"type": "string"}, "text": {"type": "string"}}},
+          "specimen": {"$ref": "#/$defs/id"}, "based_on": {"type": "array", "items": {"type": ["string", "null"]}}, "part_of": {"type": "array"},
+          "method_text": {"type": "string"}, "device_text": {"type": "string"}, "body_site": {"type": "object"}, "note": {"type": "string"},
+          "has_member": {"type": "array"}, "derived_from": {"type": "array"},
+          "sources": {"$ref": "#/$defs/sources"}
+        },
+        "anyOf": [{"required": ["value"]}, {"required": ["components"]}]
+      }
+    },
+    "specimens": {"type": "array", "items": {"type": "object", "required": ["id", "type", "status", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "type": {"type": "object", "required": ["code"]}, "status": {"enum": ["available", "unavailable", "unsatisfactory", "entered-in-error"]}, "sources": {"$ref": "#/$defs/sources"}}}},
+    "service_requests": {"type": "array", "items": {"type": "object", "required": ["id", "code", "status", "intent", "authored_on", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "category": {"type": "string"}, "code": {"$ref": "#/$defs/codeable"},
+      "status": {"enum": ["draft", "active", "on-hold", "revoked", "completed", "entered-in-error", "unknown"]}, "intent": {"enum": ["proposal", "plan", "directive", "order", "original-order", "reflex-order", "filler-order", "instance-order", "option"]},
+      "authored_on": {"$ref": "#/$defs/dateOrDateTime"}, "requester": {"$ref": "#/$defs/id"}, "sources": {"$ref": "#/$defs/sources"}}}},
+    "diagnostic_reports": {"type": "array", "items": {"type": "object", "required": ["id", "kind", "code", "status", "effective", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "kind": {"enum": ["lab", "imaging", "functional", "pathology", "other"]}, "code": {"$ref": "#/$defs/codeable"},
+      "status": {"enum": ["registered", "partial", "preliminary", "final", "amended", "corrected", "appended", "cancelled", "entered-in-error", "unknown"]}, "effective": {"$ref": "#/$defs/dateOrDateTime"}, "issued": {"$ref": "#/$defs/dateTime"},
+      "results": {"type": "array", "items": {"$ref": "#/$defs/id"}}, "conclusion": {"type": "string"}, "findings": {"type": "array", "items": {"type": "string"}}, "presented_form": {"$ref": "#/$defs/id"}, "sources": {"$ref": "#/$defs/sources"}}}},
+    "medications": {"type": "array", "items": {"type": "object", "required": ["id", "code", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "code": {"$ref": "#/$defs/codeable"}, "sources": {"$ref": "#/$defs/sources"}}}},
+    "medication_requests": {"type": "array", "items": {"type": "object", "required": ["id", "status", "intent", "authored_on", "dosage", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "medication": {"$ref": "#/$defs/id"}, "medication_code": {"$ref": "#/$defs/codeable"},
+      "status": {"enum": ["active", "on-hold", "cancelled", "completed", "entered-in-error", "stopped", "draft", "unknown"]}, "intent": {"type": "string"}, "authored_on": {"$ref": "#/$defs/dateOrDateTime"},
+      "dosage": {"type": "object", "required": ["text"], "properties": {"text": {"type": "string"}, "route": {"type": "object", "required": ["text"]}}}, "sources": {"$ref": "#/$defs/sources"}}}},
+    "medication_administrations": {"type": "array", "items": {"type": "object", "required": ["id", "status", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "status": {"enum": ["in-progress", "not-done", "on-hold", "completed", "entered-in-error", "stopped", "unknown"]}, "sources": {"$ref": "#/$defs/sources"}}, "anyOf": [{"required": ["effective"]}, {"required": ["effective_period"]}]}},
+    "allergies": {"type": "array", "items": {"type": "object", "required": ["id", "sources"], "properties": {"id": {"$ref": "#/$defs/id"}, "nka": {"type": "boolean"}, "code": {"$ref": "#/$defs/codeable"}, "sources": {"$ref": "#/$defs/sources"}}, "anyOf": [{"required": ["nka"]}, {"required": ["code"]}]}},
+    "family_history": {"type": "array", "items": {"type": "object", "required": ["id", "status", "sources"]}},
+    "clinical_impressions": {"type": "array", "items": {"type": "object", "required": ["id", "status", "date", "sources"]}},
+    "care_plans": {"type": "array", "items": {"type": "object", "required": ["id", "status", "intent", "sources"], "properties": {"activities": {"type": "array", "items": {"type": "object", "anyOf": [{"required": ["description"]}, {"required": ["reference"]}]}}}}},
+    "procedures": {"type": "array", "items": {"type": "object", "required": ["id", "code", "status", "sources"]}},
+    "related_persons": {"type": "array"},
+    "cost_statement": {
+      "type": ["object", "null"],
+      "required": ["ma_lk", "period", "prepared_at", "segments", "lines", "totals", "sources"],
+      "properties": {
+        "ma_lk": {"type": "string", "minLength": 1}, "so_bang_ke": {"type": "string"}, "period": {"$ref": "#/$defs/period"}, "prepared_at": {"$ref": "#/$defs/dateOrDateTime"},
+        "claim_subtype": {"type": "string"}, "payment_method": {"type": "string"},
+        "diagnoses": {"type": "array", "items": {"type": "object", "required": ["condition"]}},
+        "segments": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["sequence", "period"], "properties": {"sequence": {"type": "integer", "minimum": 1}, "coverage": {"type": ["string", "null"]}, "benefit_level": {"type": ["number", "null"]}}}},
+        "lines": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["sequence", "segment", "category", "text", "quantity", "hospital_unit_price", "hospital_amount", "allocation"],
+          "properties": {"sequence": {"type": "integer", "minimum": 1}, "segment": {"type": "integer", "minimum": 1}, "category": {"type": "string"}, "text": {"type": "string"}, "code": {"anyOf": [{"$ref": "#/$defs/codeable"}, {"type": "null"}]},
+            "unit": {"type": "string"}, "quantity": {"type": "number"}, "hospital_unit_price": {"type": "number"}, "insurance_unit_price": {"type": ["number", "null"]}, "hospital_amount": {"type": "number"}, "insurance_amount": {"type": ["number", "null"]},
+            "allocation": {"type": "object", "required": ["insurance_fund", "patient_copay", "other_source", "patient_self_pay"], "properties": {"insurance_fund": {"type": "number"}, "patient_copay": {"type": "number"}, "other_source": {"type": "number"}, "patient_self_pay": {"type": "number"}}},
+            "department": {"type": "string"}, "serviced": {"anyOf": [{"$ref": "#/$defs/date"}, {"$ref": "#/$defs/period"}]}, "scope": {"type": ["string", "null"]}}}},
+        "totals": {"type": "object", "required": ["hospital_total", "insurance", "patient_copay", "patient_self_pay"], "additionalProperties": {"type": "number"}},
+        "attestations": {"type": "array", "items": {"type": "object", "required": ["role", "time"], "properties": {"role": {"enum": ["preparer", "billing-confirmation", "patient-confirmation", "insurance-assessor"]}}}},
+        "composition_status": {"enum": ["preliminary", "final", "amended", "entered-in-error"]}, "invoice_status": {"enum": ["draft", "issued", "balanced", "cancelled", "entered-in-error"]},
+        "sources": {"$ref": "#/$defs/sources"}
+      }
+    },
+    "compositions": {"type": "object", "additionalProperties": {"type": "object", "required": ["id", "status", "type", "date", "authors", "title", "sections", "sources"],
+      "properties": {"sections": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["title"], "anyOf": [{"required": ["key"]}, {"required": ["code"]}]}}}}},
+    "conflicts": {"type": "array", "items": {"type": "object", "required": ["field", "values", "resolution"], "properties": {"values": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["value", "source"]}}}}},
+    "unmapped": {"type": "array", "items": {"type": "object", "required": ["item", "reason", "action"]}},
+    "review_notes": {"type": "array", "items": {"type": "string"}}
+  },
+  "$defs": {
+    "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9\\-\\.]{0,63}$", "description": "FHIR logical id, chữ thường, không dấu"},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/id"}, "description": "id các tài liệu gốc (documents[].id) — truy vết Provenance"},
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "dateTime": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}(:[0-9]{2})?([+-][0-9]{2}:[0-9]{2}|Z)$", "description": "luôn kèm múi giờ (+07:00)"},
+    "dateOrDateTime": {"anyOf": [{"$ref": "#/$defs/date"}, {"$ref": "#/$defs/dateTime"}]},
+    "period": {"type": "object", "required": ["start"], "properties": {"start": {"$ref": "#/$defs/dateOrDateTime"}, "end": {"$ref": "#/$defs/dateOrDateTime"}}},
+    "loinc": {"type": "string", "pattern": "^[0-9]{1,7}-[0-9]$"},
+    "coding": {
+      "type": "object", "required": ["system", "code"],
+      "properties": {
+        "system": {"type": "string", "description": "khoá trong vnlib.SYS (loinc, cls, icd10vn, icd10who, snomed, atc, ucum, v2-0487…) hoặc URL đầy đủ"},
+        "code": {"type": "string", "minLength": 1}, "display": {"type": "string"},
+        "source": {"enum": ["document", "lookup", "curated", "conceptmap", "llm", "manual"], "description": "document = in trên hồ sơ; lookup = tra danh mục; curated = bảng đã kiểm trong vnlib; llm = do mô hình đề xuất (phải verified=false cho tới khi người duyệt)"},
+        "verified": {"type": "boolean"}, "confidence": {"type": "number", "minimum": 0, "maximum": 1}, "note": {"type": "string"}
+      }
+    },
+    "codeable": {"type": "object", "required": ["text"], "properties": {"text": {"type": "string", "minLength": 1, "description": "nguyên văn trên hồ sơ"}, "codings": {"type": "array", "items": {"$ref": "#/$defs/coding"}}}},
+    "identifier": {"type": "object", "required": ["type", "value"], "properties": {"type": {"type": "string", "description": "mã vn-identifier-type-cs (CCCD, BHYT, MRN, MA_LUOT_KCB, MA_LK, CSKCB…) hoặc tên cục bộ"}, "value": {"type": "string", "minLength": 1}, "text": {"type": "string"}, "system": {"type": "string"}, "assigner": {"$ref": "#/$defs/id"}}},
+    "humanName": {"type": "object", "required": ["text"], "properties": {"text": {"type": "string", "minLength": 1}, "family": {"type": "string"}, "given": {"type": "array", "items": {"type": "string"}}}},
+    "address": {"type": "object", "properties": {"text": {"type": "string"}, "line": {"type": "array", "items": {"type": "string"}}, "ward": {"type": "string"}, "city": {"type": "string"}, "district": {"type": "string"}, "state": {"type": "string"}, "province_code": {"type": "string"}, "ward_code": {"type": "string"}, "country": {"type": "string"}}},
+    "quantity": {"type": "object", "required": ["value", "ucum"], "properties": {"value": {"type": "number"}, "unit_raw": {"type": "string"}, "ucum": {"type": ["string", "null"]}, "unit": {"type": "string"}}},
+    "value": {
+      "type": "object", "minProperties": 1, "maxProperties": 1,
+      "properties": {
+        "quantity": {"$ref": "#/$defs/quantity"}, "string": {"type": "string"}, "integer": {"type": "integer"}, "boolean": {"type": "boolean"}, "datetime": {"$ref": "#/$defs/dateOrDateTime"},
+        "codeable": {"$ref": "#/$defs/codeable"}, "absent": {"enum": ["unknown", "asked-unknown", "temp-unknown", "not-asked", "asked-declined", "masked", "not-applicable", "unsupported", "as-text", "error", "not-a-number", "negative-infinity", "positive-infinity", "not-performed", "not-permitted"]}
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,275 @@
+{
+ "task": "results:doc-03",
+ "docs": [
+  "doc-03"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "specimens": [
+   {
+    "id": "spc-ser-2609020046",
+    "type": {
+     "code": "SER",
+     "text": "Huyết thanh"
+    },
+    "identifiers": [
+     {
+      "type": "LOCAL",
+      "text": "Mã bệnh phẩm",
+      "value": "2609020046"
+     }
+    ],
+    "status": "available",
+    "received": "2026-09-02T09:10:00+07:00",
+    "requests": [
+     "sr-3-glucose",
+     "sr-4-ure",
+     "sr-5-creatinin",
+     "sr-6-crp",
+     "sr-7-hba1c"
+    ],
+    "sources": [
+     "doc-03"
+    ]
+   }
+  ],
+  "diagnostic_reports": [
+   {
+    "id": "dr-sinh-hoa-mau-2609020046",
+    "kind": "lab",
+    "code": {
+     "text": "KẾT QUẢ XÉT NGHIỆM SINH HÓA MÁU",
+     "codings": []
+    },
+    "based_on": [
+     "sr-3-glucose",
+     "sr-4-ure",
+     "sr-5-creatinin",
+     "sr-6-crp",
+     "sr-7-hba1c"
+    ],
+    "status": "final",
+    "effective": "2026-09-02T09:10:00+07:00",
+    "issued": "2026-09-02T10:40:00+07:00",
+    "performer": [
+     "dept-xet-nghiem"
+    ],
+    "results_interpreter": [
+     "pr-p5"
+    ],
+    "specimen": [
+     "spc-ser-2609020046"
+    ],
+    "results": [
+     "obs-lab-sinh-hoa-03-glucose",
+     "obs-lab-sinh-hoa-03-ure",
+     "obs-lab-sinh-hoa-03-creatinin",
+     "obs-lab-sinh-hoa-03-crp-dinh-luong",
+     "obs-lab-sinh-hoa-03-hba1c"
+    ],
+    "presented_form": "doc-03",
+    "sources": [
+     "doc-03"
+    ]
+   }
+  ],
+  "observations": [
+   {
+    "id": "obs-lab-sinh-hoa-03-glucose",
+    "kind": "lab",
+    "code": {
+     "text": "Glucose",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:10:00+07:00",
+    "issued": "2026-09-02T10:40:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 11.2,
+      "unit_raw": "mmol/L"
+     }
+    },
+    "interpretation": [
+     "H"
+    ],
+    "reference_range": {
+     "text": "3,9 - 6,4 mmol/L",
+     "low": 3.9,
+     "high": 6.4
+    },
+    "specimen": "spc-ser-2609020046",
+    "based_on": [
+     "sr-3-glucose"
+    ],
+    "sources": [
+     "doc-03"
+    ]
+   },
+   {
+    "id": "obs-lab-sinh-hoa-03-ure",
+    "kind": "lab",
+    "code": {
+     "text": "Ure",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:10:00+07:00",
+    "issued": "2026-09-02T10:40:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 6.1,
+      "unit_raw": "mmol/L"
+     }
+    },
+    "interpretation": [
+     "N"
+    ],
+    "reference_range": {
+     "text": "2,5 - 7,5 mmol/L",
+     "low": 2.5,
+     "high": 7.5
+    },
+    "specimen": "spc-ser-2609020046",
+    "based_on": [
+     "sr-4-ure"
+    ],
+    "sources": [
+     "doc-03"
+    ]
+   },
+   {
+    "id": "obs-lab-sinh-hoa-03-creatinin",
+    "kind": "lab",
+    "code": {
+     "text": "Creatinin",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:10:00+07:00",
+    "issued": "2026-09-02T10:40:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 82.0,
+      "unit_raw": "µmol/L"
+     }
+    },
+    "interpretation": [
+     "N"
+    ],
+    "reference_range": {
+     "text": "53 - 100 µmol/L",
+     "low": 53.0,
+     "high": 100.0
+    },
+    "specimen": "spc-ser-2609020046",
+    "based_on": [
+     "sr-5-creatinin"
+    ],
+    "sources": [
+     "doc-03"
+    ]
+   },
+   {
+    "id": "obs-lab-sinh-hoa-03-crp-dinh-luong",
+    "kind": "lab",
+    "code": {
+     "text": "CRP định lượng",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:10:00+07:00",
+    "issued": "2026-09-02T10:40:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 96.5,
+      "unit_raw": "mg/L"
+     }
+    },
+    "interpretation": [
+     "H"
+    ],
+    "reference_range": {
+     "text": "< 5 mg/L",
+     "high": 5.0
+    },
+    "specimen": "spc-ser-2609020046",
+    "based_on": [
+     "sr-6-crp"
+    ],
+    "sources": [
+     "doc-03"
+    ]
+   },
+   {
+    "id": "obs-lab-sinh-hoa-03-hba1c",
+    "kind": "lab",
+    "code": {
+     "text": "HbA1c",
+     "codings": []
+    },
+    "status": "final",
+    "effective": "2026-09-02T09:10:00+07:00",
+    "issued": "2026-09-02T10:40:00+07:00",
+    "performer": [
+     "pr-p4"
+    ],
+    "value": {
+     "quantity": {
+      "value": 8.4,
+      "unit_raw": "%"
+     }
+    },
+    "interpretation": [
+     "H"
+    ],
+    "reference_range": {
+     "text": "4 - 6 %",
+     "low": 4.0,
+     "high": 6.0
+    },
+    "specimen": "spc-ser-2609020046",
+    "based_on": [
+     "sr-7-hba1c"
+    ],
+    "sources": [
+     "doc-03"
+    ]
+   }
+  ],
+  "documents_patch": [
+   {
+    "id": "doc-03",
+    "title": "KẾT QUẢ XÉT NGHIỆM SINH HÓA MÁU",
+    "date": "2026-09-02T10:40:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p4",
+     "pr-p5"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [],
+  "review_notes": [
+   "The `based_on` fields for the diagnostic report and observations are inferred from the service requests listed in doc-04 (Phiếu điều trị), as the lab result sheet itself does not explicitly link to specific service request IDs."
+  ]
+ }
+}

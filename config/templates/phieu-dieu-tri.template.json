@@ -1,0 +1,28 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên đầy đủ của Sở Y tế ở đầu biểu mẫu.",
+    "Bệnh viện": "Tên đầy đủ của bệnh viện ở đầu biểu mẫu.",
+    "Khoa": "Tên khoa tiếp nhận, điều trị hoặc thực hiện dịch vụ trên phiếu.",
+    "Tên phiếu": "Tiêu đề đầy đủ của biểu mẫu, gồm cả số thứ tự trong ngoặc nếu có.",
+    "Mã bệnh án": "Mã bệnh án đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Mã": "Mã người bệnh in dưới mã vạch ở góc trên bên phải phiếu (không có nhãn in); giữ nguyên chữ cái, chữ số và số 0 ở đầu."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Họ tên người bệnh": "Họ và tên người bệnh ghi sau nhãn '- Họ tên người bệnh:', giữ nguyên chữ hoa như in.",
+    "Tuổi": "Tuổi của người bệnh, giữ cả từ 'tuổi' nếu được in trên biểu mẫu.",
+    "Giới tính": "Giá trị giới tính đúng như trên phiếu.",
+    "Địa chỉ": "Địa chỉ đầy đủ đúng như trên biểu mẫu.",
+    "Giường": "Giường đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Chẩn đoán": "Chẩn đoán được ghi, gồm mã ICD và tên bệnh nếu có."
+  },
+  "Diễn biến điều trị": [
+    {
+      "Ngày giờ": "Ngày giờ đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+      "Diễn biến bệnh": "Nội dung cột 'DIỄN BIẾN BỆNH' của dòng tương ứng, giữ nguyên văn kể cả các nhãn trong ngoặc vuông; giữ '\n' ở chỗ xuống dòng thật (mục mới), nối bằng dấu cách các dòng tự ngắt do hết chiều rộng cột.",
+      "Y lệnh": "Nội dung cột 'Y LỆNH' của dòng tương ứng, giữ nguyên văn kể cả các nhãn trong ngoặc vuông, khoảng trắng và thứ tự thuốc; giữ '\n' ở chỗ xuống dòng thật (mục/thuốc/cách dùng mới), nối bằng dấu cách các dòng tự ngắt do hết chiều rộng cột.",
+      "BÁC SỸ ĐIỀU TRỊ": {
+        "Họ tên": "Họ tên (kèm học hàm/học vị nếu có) của bác sĩ in dưới chữ ký trong khối 'BÁC SỸ ĐIỀU TRỊ'."
+      }
+    }
+  ]
+}

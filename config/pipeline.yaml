@@ -1,0 +1,38 @@
+# Cấu hình pipeline. Thay model = sửa khối llm. ${VAR} lấy từ biến môi trường.
+llm:
+  provider: openai_compat          # openai_compat | anthropic | mock
+  model: glm53-flash               # vd gpt-4o-mini, qwen3-32b, claude-sonnet-5-5 (anthropic)
+  base_url: ${LLM_BASE_URL}        # vLLM/OpenAI-compatible; bỏ trống nếu anthropic
+  api_key_env: LLM_API_KEY         # tên biến môi trường chứa key (không ghi key vào file)
+  json_mode: response_format       # response_format (vLLM/OpenAI) | prefill (anthropic) | none
+  extra_body:
+    chat_template_kwargs: {enable_thinking: false}   # GLM/Qwen trên vLLM: tắt thinking (bắt buộc cho trích xuất)
+  timeout: 900
+  max_tokens_default: 16000
+  temperature: 0.0
+  cache_dir: output/_llm_cache              # cache theo hash yêu cầu (chạy lại không tốn token)
+  legacy_cache_dir: output/_llm_cache       # tái dùng cache của bước làm tay (work/common.py)
+  record_dir: null                          # vd tests/fixtures/llm để ghi fixture cho provider mock
+
+facility:                          # những gì KHÔNG in trên phiếu
+  slug: bvdk-phutho
+  base_url: http://his.bvdk-phutho.vn/fhir
+  ma_cskcb: null                   # mã CSKCB 5 ký tự (QĐ BYT) nếu biết
+  ten_day_du: Bệnh viện Đa khoa tỉnh Phú Thọ
+  so_y_te: Sở Y tế Phú Thọ
+  province: ["25", "Tỉnh Phú Thọ"]         # vn-province-cs
+  ward: ["08527", "Xã Bản Nguyên"]         # vn-ward-cs (null nếu không chắc)
+  mrn_system: http://his.bvdk-phutho.vn/sid/mrn
+  staff_system: http://his.bvdk-phutho.vn/sid/staff-id
+  order_system: http://his.bvdk-phutho.vn/sid/y-lenh
+
+paths:
+  root: .                          # mặc định: thư mục cha của config/
+  templates: config/templates
+  vendor: vendor
+  output: output
+  fonts: ["C:/Windows/Fonts/times.ttf", "/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.ttf"]
+
+rules:                             # luật phân loại theo tên file; có thể bỏ trống để dùng mặc định
+  max_tokens_extract: 24000
+  max_tokens_coding: 8000

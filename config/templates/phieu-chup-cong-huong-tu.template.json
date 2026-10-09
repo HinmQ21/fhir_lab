@@ -1,0 +1,37 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Dòng tên Sở Y tế in ở đầu phiếu; chuỗi đúng như bản in.",
+    "Bệnh viện": "Dòng tên bệnh viện in ở đầu phiếu (dưới Sở Y tế); chuỗi đúng như bản in, không tự bổ sung phần không in.",
+    "Tên phiếu": "Tiêu đề phiếu in hoa ở đầu trang (không gồm dòng '(lần thứ:...)' bên dưới); chuỗi đúng như bản in.",
+    "Lần thứ": "Giá trị điền vào chỗ trống của dòng '(lần thứ:...........)' dưới tiêu đề; chuỗi; null nếu chỉ có dấu chấm chờ điền.",
+    "Mã số": "Mã số biểu mẫu in sau nhãn 'MS:' ở góc phải trên phiếu; chuỗi, giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Mã phiếu": "Giá trị sau nhãn 'Mã phiếu:' ở góc phải trên phiếu; chuỗi giữ nguyên chữ cái, chữ số, dấu phân cách; null nếu nhãn để trống.",
+    "Mã bệnh nhân": "Mã bệnh nhân in sau nhãn 'Mã BN:' ở góc phải trên phiếu; chuỗi, giữ nguyên chữ cái, chữ số và số 0 ở đầu; null nếu trống."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Tên bệnh nhân": "Họ và tên người bệnh in sau nhãn 'Tên bệnh nhân:'; chuỗi giữ nguyên chữ hoa/thường như bản in.",
+    "Tuổi": "Số tuổi in sau nhãn 'Tuổi:'; chuỗi, chỉ ghi phần giá trị (không kèm nhãn).",
+    "Giới tính": "Giá trị sau nhãn 'Giới tính:' (ví dụ Nam/Nữ); chuỗi đúng như bản in.",
+    "Địa chỉ": "Nội dung sau nhãn 'Địa chỉ:'; chuỗi giữ nguyên văn, kể cả dấu phẩy và khoảng trắng như bản in; null nếu trống.",
+    "Khoa": "Nội dung sau nhãn 'Khoa:' (tên khoa, kèm tên buồng nếu in cùng dòng); chuỗi giữ nguyên văn cả dấu câu và khoảng trắng như bản in; null nếu trống.",
+    "Chẩn đoán": "Nội dung sau nhãn 'Chẩn đoán:'; chuỗi giữ nguyên văn (mã ICD nếu có, tên bệnh, dấu gạch, khoảng trắng như bản in); dòng bị ngắt do hết lề nối bằng một dấu cách; null nếu trống.",
+    "Yêu cầu kiểm tra": "Nội dung sau nhãn 'Yêu cầu kiểm tra:' (tên kỹ thuật/dịch vụ được chỉ định); chuỗi giữ nguyên văn; dòng bị ngắt do hết lề được nối lại; null nếu trống.",
+    "Người bệnh có dị vật kim loại trong cơ thể": "Nội dung ghi sau nhãn 'Người bệnh có dị vật kim loại trong cơ thể:' (thông tin về dị vật kim loại: có/không, loại, vị trí); chuỗi giữ nguyên văn; null nếu phần sau nhãn để trống.",
+    "Các kết quả xét nghiệm, chẩn đoán hình ảnh đã có": "Nội dung ghi sau nhãn 'Các kết quả xét nghiệm, chẩn đoán hình ảnh đã có:' (các kết quả xét nghiệm/chẩn đoán hình ảnh trước đó); chuỗi giữ nguyên văn; null nếu phần sau nhãn để trống."
+  },
+  "KẾT QUẢ": {
+    "1. Kỹ thuật": "Nội dung sau nhãn '1. ... Kỹ thuật:' trong khung KẾT QUẢ (không gồm chữ nhãn); chuỗi đúng như bản in, dòng ngắt do hết lề nối bằng một dấu cách.",
+    "Mô tả": [
+      "Mỗi gạch đầu dòng dưới nhãn 'Mô tả:' là một phần tử chuỗi, theo đúng thứ tự; giữ nguyên dấu '- ' đầu dòng và dấu câu như bản in (không tự thêm dấu chấm); dòng ngắt do hết lề nối bằng một dấu cách."
+    ],
+    "2. Kết luận": "Nội dung sau nhãn '2. Kết luận:' trong khung KẾT QUẢ; chuỗi đúng như bản in, giữ nguyên khoảng trắng trong ngoặc."
+  },
+  "Lời dặn BS chuyên khoa": "Nội dung ghi sau nhãn 'Lời dặn BS chuyên khoa:' (dưới khung KẾT QUẢ); chuỗi giữ nguyên văn; null nếu để trống.",
+  "XÁC NHẬN KÝ": [
+    {
+      "Vai trò": "Chức danh in đậm của khối ký (BÁC SĨ ĐIỀU TRỊ hoặc BÁC SĨ CHUYÊN KHOA); chuỗi đúng như bản in.",
+      "Thời gian": "Thời điểm in nghiêng phía trên chức danh của khối ký (dạng giờ 'h' phút và ngày); chuỗi giữ nguyên; null nếu khối ký không in thời gian.",
+      "Họ tên": "Toàn bộ khối tên in dưới chữ ký của khối này (gồm học hàm/chức danh viết tắt; nếu in nhiều người thì giữ nguyên cả khối kèm dấu nối như bản in); dòng bị ngắt do hết lề nối bằng một dấu cách, không tách thành nhiều trường; null nếu trống."
+    }
+  ]
+}

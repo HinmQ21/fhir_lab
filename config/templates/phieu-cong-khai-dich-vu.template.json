@@ -1,0 +1,37 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên Sở Y tế in ở đầu phiếu; chuỗi đúng như bản in.",
+    "Bệnh viện": "Tên bệnh viện in ở đầu phiếu; chuỗi đúng như bản in.",
+    "Tên phiếu": "Tiêu đề phiếu (ví dụ 'PHIẾU CÔNG KHAI DỊCH VỤ KHÁM, CHỮA BỆNH NỘI TRÚ'), nối các dòng tiêu đề bằng một dấu cách; chuỗi.",
+    "Khoa": "Tên khoa sau nhãn 'Khoa:'; chuỗi."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Họ tên người bệnh": "Họ tên sau nhãn 'Họ tên người bệnh:'; chuỗi giữ nguyên chữ hoa.",
+    "Tuổi": "Giá trị sau nhãn 'Tuổi:'; chuỗi.",
+    "Giới tính": "Giá trị sau nhãn 'Giới tính:'; chuỗi.",
+    "Ngày vào viện": "Giá trị sau nhãn 'Ngày vào viện:'; giữ nguyên đầy đủ giờ, phút, ngày tháng năm như bản in; chuỗi.",
+    "Ngày ra viện": "Giá trị sau nhãn 'Ngày ra viện:'; giữ nguyên đầy đủ giờ, phút, ngày tháng năm như bản in; chuỗi; null nếu trống.",
+    "Giường": "Giá trị sau nhãn 'Giường:'; null nếu trống hoặc chỉ là mã placeholder.",
+    "Chẩn đoán": "Giá trị sau nhãn 'Chẩn đoán:'; chuỗi giữ nguyên văn."
+  },
+  "Dịch vụ": [
+    {
+      "Nhóm": "Tên nhóm dịch vụ in đậm có số thứ tự (ví dụ '1 Khám bệnh', '2 Xét nghiệm', '3 Chẩn đoán hình ảnh', '4 Thăm dò chức năng', '5 Thuốc và dịch truyền'); chuỗi đúng như bản in.",
+      "Chi tiết": [
+        {
+          "STT": "Số thứ tự dòng dịch vụ (ví dụ '2.1'); chuỗi.",
+          "Tên dịch vụ": "Tên dịch vụ khám bệnh, chữa bệnh của dòng tương ứng; chuỗi, dòng ngắt do hết chiều rộng cột nối bằng một dấu cách.",
+          "Đơn vị": "Đơn vị tính của dòng (Lần, Ngày, Viên, ...); chuỗi.",
+          "Số lượng theo ngày": "Số lượng ghi ở cột số lượng theo ngày/tháng của dòng; chuỗi; null nếu trống.",
+          "Tổng": "Số lượng ở cột 'Tổng' của dòng; chuỗi; null nếu trống."
+        }
+      ]
+    }
+  ],
+  "XÁC NHẬN KÝ": [
+    {
+      "Người ký": "Nội dung sau nhãn 'Người Ký:' trong khối chữ ký số; chuỗi.",
+      "Chức danh": "Nội dung sau nhãn 'Chức danh:' trong khối chữ ký số; chuỗi; null nếu không có."
+    }
+  ]
+}

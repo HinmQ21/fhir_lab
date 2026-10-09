@@ -1,0 +1,46 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên đầy đủ của Sở Y tế ở đầu biểu mẫu.",
+    "Bệnh viện": "Tên đầy đủ của bệnh viện ở đầu biểu mẫu.",
+    "Khoa": "Tên khoa tiếp nhận, điều trị hoặc thực hiện dịch vụ trên phiếu.",
+    "Mã số": "Mã số biểu mẫu hoặc hồ sơ đúng như trên phiếu; giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Mã bệnh án": "Mã bệnh án đúng như trên biểu mẫu; giữ nguyên chữ cái, chữ số, dấu phân cách và số 0 ở đầu.",
+    "Tên phiếu": "Tiêu đề đầy đủ của biểu mẫu, gồm cả số thứ tự trong ngoặc nếu có.",
+    "Mã": "Mã đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có."
+  },
+  "HÀNH CHÍNH": {
+    "Họ tên": "Họ và tên đầy đủ của người tương ứng trong đúng mục hiện tại.",
+    "Ngày sinh": "Ngày sinh của người bệnh đúng như trên phiếu.",
+    "Tuổi": "Tuổi của người bệnh, giữ cả từ 'tuổi' nếu được in trên biểu mẫu.",
+    "Giới tính": {
+      "Nam": "Ô 'Nam' trong mục 'Giới tính': true nếu được chọn, false nếu không.",
+      "Nữ": "Ô 'Nữ' trong mục 'Giới tính': true nếu được chọn, false nếu không."
+    },
+    "Dân tộc": "Dân tộc của người bệnh.",
+    "Địa chỉ": "Địa chỉ đầy đủ đúng như trên biểu mẫu.",
+    "Số thẻ BHYT": "Số thẻ bảo hiểm y tế; giữ nguyên chữ cái, chữ số, khoảng trắng và số 0 ở đầu.",
+    "Số căn cước/hộ chiếu/mã định danh cá nhân": "Số căn cước/hộ chiếu/mã định danh cá nhân đúng như trên biểu mẫu; giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Vào viện ngày": "Vào viện ngày đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Ra viện ngày": "Ra viện ngày đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có."
+  },
+  "CHẨN ĐOÁN": {
+    "Chẩn đoán vào viện": "Chẩn đoán lúc vào viện, gồm mã ICD và tên bệnh nếu có.",
+    "Chẩn đoán ra viện": "Chẩn đoán khi ra viện, gồm mã ICD và tên bệnh nếu có."
+  },
+  "TÓM TẮT QUÁ TRÌNH ĐIỀU TRỊ": {
+    "Lý do vào viện": "Lý do vào viện đúng như trên biểu mẫu; null nếu không có thông tin.",
+    "Tóm tắt quá trình bệnh lý và diễn biến lâm sàng": "Nội dung tóm tắt quá trình bệnh lý và diễn biến lâm sàng đúng như trên biểu mẫu, giữ nguyên thứ tự các dòng và dấu đầu dòng.",
+    "Tiền sử bệnh": "Tiền sử bệnh đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Những dấu hiệu lâm sàng chính": "Những dấu hiệu lâm sàng chính đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Tóm tắt kết quả xét nghiệm/cận lâm sàng": "Nội dung tóm tắt kết quả xét nghiệm/cận lâm sàng đúng như trên biểu mẫu, giữ nguyên thứ tự các dòng và dấu đầu dòng.",
+    "Phương pháp điều trị": "Phương pháp điều trị chính đã áp dụng cho người bệnh.",
+    "TÌNH TRẠNG RA VIỆN": "TÌNH TRẠNG RA VIỆN đúng như trên biểu mẫu; giữ nguyên nội dung, ký hiệu và thứ tự nếu có.",
+    "Hướng điều trị và các chế độ tiếp theo": "Hướng điều trị, chăm sóc và chế độ tiếp theo sau đợt điều trị."
+  },
+  "XÁC NHẬN": {
+    "Ngày giờ": "Ngày giờ đúng như trên biểu mẫu; giữ nguyên đầy đủ ngày, giờ và phút nếu có.",
+    "Họ tên": "Họ và tên đầy đủ của người tương ứng trong đúng mục hiện tại.",
+    "Người ký": "Họ tên hoặc thông tin người ký đúng như trên biểu mẫu, không suy diễn phần không được ghi.",
+    "Chức danh": "Học hàm, học vị hoặc chức danh đúng như trên biểu mẫu."
+  }
+}

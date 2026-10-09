@@ -1,0 +1,11 @@
+{
+  "name": "vn-fhir",
+  "version": "0.1.0",
+  "description": "Chuyển hồ sơ bệnh án Việt Nam (PDF theo TT 32/2023/TT-BYT) sang FHIR R4 VN Core 0.10.0 với mã chuẩn (ICD-10 VN, LOINC, CLS QĐ 1227, UCUM) và vòng lặp kiểm tra chất lượng: skill vn-fhir-convert + agents extractor/reviewer + hook validator + MCP tra cứu danh mục.",
+  "author": {"name": "VTS fhir_lab"},
+  "keywords": ["fhir", "vn-core", "hsba", "benh-an-dien-tu", "loinc", "icd10", "bhyt", "xml4750", "terminology"],
+  "skills": ["./skills/vn-fhir-convert"],
+  "agents": ["./agents/extractor.md", "./agents/reviewer.md"],
+  "hooks": "./hooks/hooks.json",
+  "mcpServers": "./.mcp.json"
+}

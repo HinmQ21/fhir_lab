@@ -1,0 +1,95 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Mẫu số": "Giá trị sau nhãn 'Mẫu số:' ở đầu phiếu (ví dụ '01/KBCB'); chuỗi.",
+    "Sở Y tế": "Giá trị sau nhãn 'Bộ Y tế/Sở Y tế/ Y tế ngành:'; chuỗi.",
+    "Cơ sở khám chữa bệnh": "Giá trị sau nhãn 'Cơ sở khám, chữa bệnh:'; chuỗi.",
+    "Sổ lưu trữ": "Giá trị sau nhãn 'Sổ lưu trữ :'; chuỗi; null nếu trống.",
+    "Mã số người bệnh": "Giá trị sau nhãn 'Mã số người bệnh:'; chuỗi giữ nguyên chữ và số 0 ở đầu.",
+    "Khoa": "Giá trị sau nhãn 'Khoa:'; chuỗi.",
+    "Mã khoa": "Giá trị sau nhãn 'Mã khoa:'; chuỗi.",
+    "Số khám bệnh": "Giá trị sau nhãn 'Số khám bệnh:'; chuỗi.",
+    "Tên phiếu": "Tiêu đề phiếu in đậm giữa trang (ví dụ 'BẢNG KÊ CHI PHÍ ĐIỀU TRỊ NỘI TRÚ'); chuỗi."
+  },
+  "I. Phần hành chính": {
+    "Họ và tên người bệnh": "Giá trị sau nhãn '(1) Họ và tên người bệnh:'; chuỗi giữ nguyên chữ hoa.",
+    "Ngày tháng năm sinh": "Giá trị sau nhãn 'Ngày, tháng, năm sinh:'; chuỗi dạng dd/mm/yyyy như bản in.",
+    "Giới tính": "Giá trị sau nhãn 'Giới tính:'; chuỗi.",
+    "Địa chỉ hiện tại": "Giá trị sau nhãn '(2) Địa chỉ hiện tại:'; chuỗi giữ nguyên văn.",
+    "Mã khu vực": "Giá trị sau nhãn '(3) Mã khu vực (K1/K2/K3)'; null nếu trống.",
+    "Mã thẻ BHYT": "Mã thẻ BHYT sau nhãn '(4) Mã thẻ BHYT', ghép toàn bộ các ô thành một chuỗi liền không có khoảng trắng (ví dụ 'GD4000000000000'); chuỗi.",
+    "Giá trị từ": "Ngày bắt đầu hiệu lực thẻ sau nhãn 'Giá trị từ'; chuỗi dd/mm/yyyy.",
+    "Giá trị đến": "Ngày hết hiệu lực thẻ sau chữ 'đến'; chuỗi dd/mm/yyyy.",
+    "Nơi ĐK KCB BHYT ban đầu": "Giá trị sau nhãn '(6) Nơi ĐK KCB BHYT ban đầu:'; chuỗi.",
+    "Mã nơi ĐK KCB ban đầu": "Giá trị sau nhãn '(6) Mã:'; chuỗi.",
+    "Đến khám": "Giá trị sau nhãn '(7) Đến khám:'; giữ nguyên giờ phút ngày tháng năm như bản in; chuỗi.",
+    "Điều trị từ": "Giá trị sau nhãn '(8) Điều trị ngoại trú/nội trú từ:'; giữ nguyên như bản in; chuỗi.",
+    "Kết thúc điều trị": "Giá trị sau nhãn '(9) Kết thúc khám/điều trị:'; giữ nguyên như bản in; chuỗi.",
+    "Tổng số ngày điều trị": "Giá trị sau nhãn 'Tổng số ngày điều trị:'; chuỗi.",
+    "Tình trạng ra viện": "Mã số ghi sau nhãn '(10) Tính trạng ra viện' (ví dụ '2'); chuỗi; null nếu trống.",
+    "Cấp cứu": "true nếu ô '(11) Cấp cứu' được đánh dấu X, false nếu không.",
+    "Đúng tuyến": "true nếu ô '(12) Đúng tuyến' được đánh dấu X, false nếu không.",
+    "Thông tuyến": "true nếu ô '(13) Thông tuyến' được đánh dấu X, false nếu không.",
+    "Trái tuyến": "true nếu ô '(14) Trái tuyến' được đánh dấu X, false nếu không.",
+    "Nơi chuyển đến": "Giá trị sau nhãn 'Nơi chuyển:'; null nếu trống.",
+    "Nơi chuyển đi": "Giá trị sau nhãn 'Nơi chuyển đi:'; null nếu trống.",
+    "Chẩn đoán xác định": "Giá trị sau nhãn '(15) Chẩn đoán xác định:'; chuỗi.",
+    "Mã bệnh ICD-10": "Giá trị sau nhãn '(16) Mã bệnh (ICD-10):'; chuỗi.",
+    "Bệnh kèm theo": "Giá trị sau nhãn '(17) Bệnh kèm theo:'; chuỗi; null nếu trống.",
+    "Mã bệnh kèm theo": "Giá trị sau nhãn '(18) Mã bệnh kèm theo:'; chuỗi; null nếu trống; nhiều mã thì giữ nguyên dấu phân cách.",
+    "Thời điểm đủ 5 năm liên tục": "Giá trị sau nhãn '(19)'; null nếu chỉ là dấu chấm chờ điền.",
+    "Miễn cùng chi trả trong năm từ ngày": "Giá trị sau nhãn '(20)'; null nếu chỉ là dấu chấm chờ điền."
+  },
+  "II. Phần chi phí": {
+    "Mức hưởng": "Giá trị sau nhãn 'Mức hưởng' (ví dụ '80%'); chuỗi.",
+    "Chi phí tính từ ngày": "Ngày bắt đầu trong dòng '(Chi phí KBCB tính từ ngày ... đến ngày ...)'; chuỗi dd/mm/yyyy.",
+    "Chi phí tính đến ngày": "Ngày kết thúc trong dòng '(Chi phí KBCB tính từ ngày ... đến ngày ...)'; chuỗi dd/mm/yyyy.",
+    "Mục": [
+      {
+        "Mục": "Tên mục in đậm có số thứ tự (ví dụ '1. Khám bệnh', '2. Ngày giường', '3. Xét nghiệm', '4. Chẩn đoán hình ảnh', '5. Thăm dò chức năng', '8. Thuốc', ...); chuỗi đúng như bản in, bỏ dấu ':' cuối.",
+        "Mục con": "Tên mục con nếu có (ví dụ '2.2. Ngày giường điều trị nội trú'); null nếu mục không có mục con.",
+        "Tổng mục": {
+          "Thành tiền BV": "Số ở cột thành tiền BV trên dòng tổng của mục; số nguyên (bỏ dấu phân cách hàng nghìn); null nếu trống.",
+          "Thành tiền BH": "Số ở cột thành tiền BH trên dòng tổng của mục; số nguyên; null nếu trống.",
+          "Quỹ BHYT": "Số ở cột Quỹ BHYT trên dòng tổng của mục; số nguyên.",
+          "Người bệnh cùng chi trả": "Số ở cột người bệnh cùng chi trả trên dòng tổng của mục; số nguyên.",
+          "Khác": "Số ở cột 'Khác' trên dòng tổng của mục; số nguyên.",
+          "Người bệnh tự trả": "Số ở cột người bệnh tự trả trên dòng tổng của mục; số nguyên."
+        },
+        "Chi tiết": [
+          {
+            "Nội dung": "Tên dịch vụ/thuốc ở cột (1) của dòng chi tiết; chuỗi, dòng ngắt do hết chiều rộng nối bằng một dấu cách.",
+            "Đơn vị tính": "Cột (2); chuỗi.",
+            "Số lượng": "Cột (3); số thực.",
+            "Đơn giá BV": "Cột (4); số nguyên.",
+            "Đơn giá BH": "Cột (5); số nguyên.",
+            "Tỷ lệ thanh toán theo dịch vụ": "Cột (6) phần trăm; số nguyên.",
+            "Thành tiền BV": "Cột (7); số nguyên.",
+            "Tỷ lệ thanh toán BHYT": "Cột (9) phần trăm; số nguyên.",
+            "Thành tiền BH": "Cột (10); số nguyên.",
+            "Quỹ BHYT": "Cột (11) Quỹ BHYT; số nguyên.",
+            "Người bệnh cùng chi trả": "Cột (12) người bệnh cùng chi trả; số nguyên.",
+            "Khác": "Cột 'Khác'; số nguyên.",
+            "Người bệnh tự trả": "Cột (13) người bệnh tự trả; số nguyên."
+          }
+        ]
+      }
+    ],
+    "Tổng cộng": {
+      "Tổng chi phí KBCB": "Tổng chi phí khám chữa bệnh (số in ở dòng tổng chi phí lần khám bệnh/đợt điều trị); số nguyên; null nếu không in.",
+      "Quỹ BHYT thanh toán": "Số tiền quỹ BHYT thanh toán ở phần tổng kết; số nguyên; null nếu không in.",
+      "Người bệnh cùng chi trả": "Số tiền người bệnh cùng chi trả ở phần tổng kết; số nguyên; null nếu không in.",
+      "Người bệnh tự trả": "Số tiền người bệnh tự trả/khoản khác ở phần tổng kết; số nguyên; null nếu không in.",
+      "Nguồn khác": "Số tiền nguồn khác ở phần tổng kết; số nguyên; null nếu không in.",
+      "Tổng cộng bằng chữ": "Số tiền bằng chữ nếu in; chuỗi; null nếu không in."
+    }
+  },
+  "XÁC NHẬN KÝ": [
+    {
+      "Vai trò": "Chức danh in đậm của khối ký (ví dụ 'NGƯỜI LẬP BẢNG KÊ', 'KẾ TOÁN VIỆN PHÍ', 'NGƯỜI BỆNH', 'GIÁM ĐỊNH BHYT'); chuỗi.",
+      "Thời gian": "Dòng ngày tháng in phía trên hoặc trong khối ký; null nếu không có.",
+      "Họ tên": "Họ tên in trong khối ký; null nếu trống.",
+      "Người ký": "Nội dung sau nhãn 'Người Ký:' của chữ ký số nếu có; null nếu không.",
+      "Chức danh": "Nội dung sau nhãn 'Chức danh:' của chữ ký số nếu có; null nếu không."
+    }
+  ]
+}

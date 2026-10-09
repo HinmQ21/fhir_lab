@@ -1,0 +1,103 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Tên Sở Y tế in ở góc trên bên trái; chuỗi giữ nguyên văn và cách viết hoa.",
+    "Bệnh viện": "Tên bệnh viện in dưới dòng Sở Y tế; chuỗi giữ nguyên văn và cách viết hoa.",
+    "Khoa": "Tên khoa ghi sau nhãn 'Khoa:' ở góc trên bên trái (phần đầu phiếu); chuỗi, null nếu trống.",
+    "Tên phiếu": "Tiêu đề phiếu in giữa đầu trang, gồm cả phần cấp chăm sóc trong ngoặc ở dòng dưới (nối hai dòng bằng một dấu cách); chuỗi giữ nguyên văn.",
+    "Tờ số": "Số tờ ghi sau nhãn 'Tờ số:' dưới tiêu đề; chuỗi, null nếu trống.",
+    "Mã số": "Mã số biểu mẫu ghi sau nhãn 'MS:' ở góc trên bên phải; chuỗi giữ nguyên dấu '/'.",
+    "Số vào viện": "Số vào viện ghi sau nhãn 'Số vào viện:' ở góc trên bên phải; chuỗi giữ nguyên ký tự, dấu '/' và số 0 ở đầu.",
+    "Mã người bệnh": "Mã người bệnh ghi sau nhãn 'Mã người bệnh:' ở góc trên bên phải; chuỗi giữ nguyên chữ cái, chữ số và số 0 ở đầu."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Họ và tên người bệnh": "Họ và tên người bệnh ghi sau nhãn 'Họ và tên người bệnh:'; chuỗi giữ nguyên cách viết hoa.",
+    "Tuổi": "Tuổi ghi sau nhãn 'Tuổi:'; chuỗi giữ nguyên như ghi, null nếu trống.",
+    "Giới tính": {
+      "Nam": "Ô vuông 'Nam' cạnh tuổi: true nếu ô được đánh dấu, false nếu không.",
+      "Nữ": "Ô vuông 'Nữ' cạnh tuổi: true nếu ô được đánh dấu, false nếu không."
+    },
+    "Khoa": "Tên khoa ghi sau nhãn 'Khoa:' trong phần thông tin người bệnh; chuỗi, null nếu trống.",
+    "Phòng": "Phòng/buồng ghi sau nhãn 'Phòng:'; chuỗi giữ nguyên văn, null nếu trống.",
+    "Giường": "Số/mã giường ghi sau nhãn 'Giường:'; chuỗi giữ nguyên văn, null nếu trống.",
+    "Chẩn đoán": "Chẩn đoán bệnh ghi sau nhãn 'Chẩn đoán:' trong phần thông tin người bệnh; chuỗi giữ nguyên văn (kèm mã ICD nếu có ghi), null nếu trống."
+  },
+  "Tiền sử dị ứng": {
+    "Chưa ghi nhận": "Ô vuông 'Chưa ghi nhận' sau nhãn 'Tiền sử dị ứng:': true nếu ô được đánh dấu, false nếu không.",
+    "Có,ghi rõ": "Ô vuông 'Có,ghi rõ' (có tiền sử dị ứng, ghi rõ) sau nhãn 'Tiền sử dị ứng:': true nếu ô được đánh dấu, false nếu không.",
+    "Nội dung": "Nội dung dị ứng ghi trên dòng chấm sau 'Có,ghi rõ:' (khoá nhóm logic, không có nhãn in riêng); chuỗi giữ nguyên văn, null nếu trống."
+  },
+  "CHẨN ĐOÁN ĐIỀU DƯỠNG, ĐÁNH GIÁ, MỤC TIÊU": [
+    {
+      "Chẩn đoán": "Mỗi phần tử ứng với một khối 'Chẩn đoán N' ở cột phải 'Chẩn đoán ĐD/ Đánh giá mục tiêu' (chỉ gồm khối có ghi nội dung). Trường này là chẩn đoán điều dưỡng ghi dưới nhãn 'Chẩn đoán N': mã chẩn đoán điều dưỡng theo danh mục của bệnh viện kèm nội dung (không phải mã ICD); chuỗi giữ nguyên văn, các dòng ngắt do hết chiều rộng cột nối bằng một dấu cách.",
+      "Mục tiêu được chọn": "Ô vuông cạnh nhãn 'Mục tiêu 1' trong khối chẩn đoán tương ứng: true nếu ô được đánh dấu, false nếu không.",
+      "Mục tiêu": "Nội dung mục tiêu chăm sóc ghi dưới nhãn 'Mục tiêu 1' của khối chẩn đoán tương ứng (mã mục tiêu kèm nội dung); chuỗi giữ nguyên văn, các dòng ngắt do hết chiều rộng cột nối bằng một dấu cách, null nếu trống."
+    }
+  ],
+  "Bàn giao": "Nội dung ghi trên các dòng chấm dưới nhãn 'Bàn giao' ở cột phải (cột 'Chẩn đoán ĐD/ Đánh giá mục tiêu', ô cùng hàng với nhóm 'Vận động, PHCN' và các dòng chấm kéo sang trang 2); chuỗi giữ nguyên văn, null nếu các dòng để trống.",
+  "Theo dõi chăm sóc": [
+    {
+      "Ngày": "Mỗi phần tử của mảng là một cột thời điểm theo dõi (từ trái sang phải) có ghi ngày. Trường này là ngày ở hàng 'Ngày:' dạng ngày / tháng / năm; chuỗi giữ nguyên các dấu '/' in sẵn và khoảng trắng quanh chúng như trên phiếu.",
+      "Giờ": "Giờ ở hàng 'Giờ:' của cột tương ứng dạng giờ : phút; chuỗi giữ nguyên dấu ':' in sẵn và khoảng trắng quanh nó như trên phiếu, null nếu trống.",
+      "Phân cấp chăm sóc": "Hàng 'Phân cấp chăm sóc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "Nhận định, theo dõi": "Hàng 'Nhận định, theo dõi' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "Chỉ số sinh tồn, sinh trắc": {
+        "Mạch": "Hàng 'Mạch (lần/phút)' trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Nhiệt độ": "Hàng 'Nhiệt độ (°C)' trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Huyết áp": "Hàng 'Huyết áp (mmHg)' (tâm thu/tâm trương) trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Nhịp thở": "Hàng 'Nhịp thở(lần/phút)' trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "SpO2": "Hàng 'SpO2 (%)' (độ bão hòa oxy) trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Cân nặng": "Hàng 'Cân nặng (kg)' trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "BMI": "Hàng 'BMI' (chỉ số khối cơ thể) trong nhóm 'Chỉ số sinh tồn, sinh trắc' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Toàn thân": {
+        "Da, niêm mạc": "Hàng 'Da, niêm mạc' trong nhóm 'Toàn thân' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Tri giác": "Hàng 'Tri giác' trong nhóm 'Toàn thân' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Hô hấp": {
+        "Ho": "Hàng 'Ho' trong nhóm 'Hô hấp' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Tuần hoàn": {
+        "Tim mạch": "Hàng 'Tim mạch' trong nhóm 'Tuần hoàn': ghi nhận tình trạng tim mạch bằng chữ viết tắt/ký hiệu đánh giá (không phải trị số đo) của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Dinh dưỡng": {
+        "Ăn uống": "Hàng 'Ăn uống' trong nhóm 'Dinh dưỡng' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Giấc ngủ, nghỉ ngơi": {
+        "Giấc ngủ": "Hàng 'Giấc ngủ' trong nhóm 'Giấc ngủ, nghỉ ngơi' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Vệ sinh cá nhân": {
+        "Tự vệ sinh": "Hàng 'Tự vệ sinh' trong nhóm 'Vệ sinh cá nhân' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Tinh thần": {
+        "Lo lắng": "Hàng 'Lo lắng' trong nhóm 'Tinh thần' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Vận động, PHCN": "Nhóm hàng 'Vận động, PHCN' (vận động, phục hồi chức năng; ô tên hàng con để trống trên phiếu) của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "GDSK": "Hàng 'GDSK' trong nhóm 'GDSK' (giáo dục sức khỏe) của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "Theo dõi khác": {
+        "Đau": "Hàng 'Đau' trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Loét do tỳ đẻ": "Hàng 'Loét do tỳ đẻ' (nhãn in đúng như vậy; nghĩa là loét do tỳ đè) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Nguy cơ ngã": "Hàng 'Nguy cơ ngã' trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "2M kết mạc": "Hàng '2M kết mạc' (kết mạc hai mắt) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "2M giác mạc": "Hàng '2M giác mạc' (giác mạc hai mắt) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "2M Tiền phòng": "Hàng '2M Tiền phòng' (tiền phòng hai mắt) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "2M Đồng tử": "Hàng '2M Đồng tử' (đồng tử hai mắt) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "2M đáy mắt": "Hàng '2M đáy mắt' (đáy mắt hai mắt) trong nhóm 'Theo dõi khác'; chữ bị cắt trong ô chỉ giữ phần đọc được của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "MP: PT Cắt bè": "Hàng 'MP: PT Cắt bè' (mắt phải: phẫu thuật cắt bè) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "MP": "Hàng 'MP' (mắt phải) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "MT": "Hàng 'MT' (mắt trái) trong nhóm 'Theo dõi khác' của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Nhãn áp MP": "Hàng 'Nhãn áp MP' (nhãn áp mắt phải) trong nhóm 'Theo dõi khác'; giữ nguyên đơn vị viết liền nếu có của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+        "Nhãn áp MT": "Hàng 'Nhãn áp MT' (nhãn áp mắt trái) trong nhóm 'Theo dõi khác'; giữ nguyên đơn vị viết liền nếu có của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống."
+      },
+      "Can thiệp điều dưỡng": "Hàng 'Can thiệp điều dưỡng': mã can thiệp điều dưỡng theo danh mục của bệnh viện (ký hiệu chữ-số) của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "Thực hiện thuốc theo chỉ định": "Hàng 'Thực hiện thuốc theo chỉ định': mã thực hiện thuốc (ký hiệu chữ-số) của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "Thực hiện theo chỉ định CLS": [
+        "Hàng 'Thực hiện theo chỉ định CLS' (cận lâm sàng) của cột tương ứng: mảng chuỗi, mỗi phần tử là một mã chỉ định CLS theo thứ tự ghi trong ô (tách theo dấu phẩy, không giữ dấu phẩy); mảng rỗng nếu ô trống."
+      ],
+      "Chăm sóc điều dưỡng": "Hàng 'Chăm sóc điều dưỡng': mã chăm sóc/theo dõi điều dưỡng theo danh mục của bệnh viện (ký hiệu chữ-số) của cột thời điểm tương ứng; chuỗi giữ nguyên văn như ghi trong ô (kể cả ký hiệu '+', '-', chữ viết tắt), null nếu ô trống.",
+      "Tư vấn, giáo dục sức khỏe": [
+        "Hàng 'Tư vấn, giáo dục sức khỏe' của cột tương ứng: mảng chuỗi, mỗi phần tử là một mã hướng dẫn/tư vấn theo thứ tự ghi trong ô (tách theo dấu phẩy, không giữ dấu phẩy); mảng rỗng nếu ô trống."
+      ],
+      "Tên điều dưỡng thực hiện": "Hàng 'Tên điều dưỡng thực hiện': mã tài khoản kèm họ tên điều dưỡng ghi trong ô của cột tương ứng; chuỗi giữ nguyên văn, các dòng ngắt do hết chiều rộng ô nối bằng một dấu cách, null nếu trống."
+    }
+  ]
+}

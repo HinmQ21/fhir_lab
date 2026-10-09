@@ -1,0 +1,684 @@
+{
+ "_meta": {
+  "source": "NLM Clinical Tables LOINC API (https://clinicaltables.nlm.nih.gov/api/loinc_items/v3/search)",
+  "checked": "2026-10-08",
+  "note": "null = mã KHÔNG tồn tại; status 'DEPRECATED' = không dùng cho dữ liệu mới"
+ },
+ "2000-8": {
+  "display": "Calcium [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "17861-6": {
+  "display": "Calcium [Mass/volume] in Serum or Plasma",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "47598-9": null,
+ "14749-6": {
+  "display": "Glucose [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "2345-7": {
+  "display": "Glucose [Mass/volume] in Serum or Plasma",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "14682-9": {
+  "display": "Creatinine [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "2160-0": {
+  "display": "Creatinine [Mass/volume] in Serum or Plasma",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "2885-2": {
+  "display": "Protein [Mass/volume] in Serum or Plasma",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "1751-7": {
+  "display": "Albumin [Mass/volume] in Serum or Plasma",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "14647-2": {
+  "display": "Cholesterol [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "14927-8": {
+  "display": "Triglyceride [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "22748-8": {
+  "display": "Cholesterol in LDL [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "13457-7": {
+  "display": "Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "14646-4": {
+  "display": "Cholesterol in HDL [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "1920-8": {
+  "display": "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+  "property": "CCnc",
+  "status": "ACTIVE"
+ },
+ "1742-6": {
+  "display": "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma",
+  "property": "CCnc",
+  "status": "ACTIVE"
+ },
+ "2951-2": {
+  "display": "Sodium [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "2823-3": {
+  "display": "Potassium [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "2075-0": {
+  "display": "Chloride [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "22664-7": {
+  "display": "Urea [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "14933-6": {
+  "display": "Urate [Moles/volume] in Serum or Plasma",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "1988-5": {
+  "display": "C reactive protein [Mass/volume] in Serum or Plasma",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "6690-2": {
+  "display": "Leukocytes [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "751-8": {
+  "display": "Neutrophils [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "731-0": {
+  "display": "Lymphocytes [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "742-7": {
+  "display": "Monocytes [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "711-2": {
+  "display": "Eosinophils [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "704-7": {
+  "display": "Basophils [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "53115-2": {
+  "display": "Immature granulocytes [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "770-8": {
+  "display": "Neutrophils/Leukocytes in Blood by Automated count",
+  "property": "NFr",
+  "status": "ACTIVE"
+ },
+ "736-9": {
+  "display": "Lymphocytes/Leukocytes in Blood by Automated count",
+  "property": "NFr",
+  "status": "ACTIVE"
+ },
+ "5905-5": {
+  "display": "Monocytes/Leukocytes in Blood by Automated count",
+  "property": "NFr",
+  "status": "ACTIVE"
+ },
+ "713-8": {
+  "display": "Eosinophils/Leukocytes in Blood by Automated count",
+  "property": "NFr",
+  "status": "ACTIVE"
+ },
+ "706-2": {
+  "display": "Basophils/Leukocytes in Blood by Automated count",
+  "property": "NFr",
+  "status": "ACTIVE"
+ },
+ "71695-1": {
+  "display": "Immature granulocytes/Leukocytes in Blood by Automated count",
+  "property": "NFr",
+  "status": "ACTIVE"
+ },
+ "789-8": {
+  "display": "Erythrocytes [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "718-7": {
+  "display": "Hemoglobin [Mass/volume] in Blood",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "4544-3": {
+  "display": "Hematocrit [Volume Fraction] of Blood by Automated count",
+  "property": "VFr",
+  "status": "ACTIVE"
+ },
+ "787-2": {
+  "display": "MCV [Entitic mean volume] in Red Blood Cells by Automated count",
+  "property": "EntMeanVol",
+  "status": "ACTIVE"
+ },
+ "785-6": {
+  "display": "MCH [Entitic mass] by Automated count",
+  "property": "EntMass",
+  "status": "ACTIVE"
+ },
+ "786-4": {
+  "display": "MCHC [Entitic Mass/volume] in Red Blood Cells by Automated count",
+  "property": "EntMCnc",
+  "status": "ACTIVE"
+ },
+ "788-0": {
+  "display": "Erythrocyte [DistWidth] in Blood by Automated count",
+  "property": "DistWidth",
+  "status": "ACTIVE"
+ },
+ "21000-5": {
+  "display": "Deprecated Erythrocyte distribution width [Entitic volume] by Automated count",
+  "property": "EntVol",
+  "status": "DEPRECATED"
+ },
+ "58413-6": {
+  "display": "Nucleated erythrocytes/Leukocytes [Ratio] in Blood by Automated count",
+  "property": "Ratio",
+  "status": "ACTIVE"
+ },
+ "58437-5": {
+  "display": "Microorganisms seen [Type] in Urine sediment by Light microscopy",
+  "property": "Type",
+  "status": "ACTIVE"
+ },
+ "777-3": {
+  "display": "Platelets [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "32623-1": {
+  "display": "Platelet [Entitic mean volume] in Blood by Automated count",
+  "property": "EntMeanVol",
+  "status": "ACTIVE"
+ },
+ "32207-3": {
+  "display": "Platelet distribution width [Entitic volume] in Blood by Automated count",
+  "property": "EntVol",
+  "status": "ACTIVE"
+ },
+ "51637-7": {
+  "display": "Plateletcrit [Volume Fraction] in Blood",
+  "property": "VFr",
+  "status": "ACTIVE"
+ },
+ "25428-4": {
+  "display": "Glucose [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "5770-3": {
+  "display": "Bilirubin.total [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "2514-8": {
+  "display": "Ketones [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "5811-5": {
+  "display": "Specific gravity of Urine by Test strip",
+  "property": "SpGrav",
+  "status": "ACTIVE"
+ },
+ "5794-3": {
+  "display": "Hemoglobin [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "5803-2": {
+  "display": "pH of Urine by Test strip",
+  "property": "LsCnc",
+  "status": "ACTIVE"
+ },
+ "5804-0": {
+  "display": "Protein [Mass/volume] in Urine by Test strip",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "5818-0": {
+  "display": "Urobilinogen [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "13658-8": null,
+ "20405-7": {
+  "display": "Urobilinogen [Mass/volume] in Urine by Test strip",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "5802-4": {
+  "display": "Nitrite [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "5799-2": {
+  "display": "Leukocyte esterase [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "5778-6": {
+  "display": "Color of Urine",
+  "property": "Color",
+  "status": "ACTIVE"
+ },
+ "32167-9": {
+  "display": "Clarity of Urine",
+  "property": "Type",
+  "status": "ACTIVE"
+ },
+ "14683-7": {
+  "display": "Creatinine [Moles/volume] in Urine",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "2161-8": {
+  "display": "Creatinine [Mass/volume] in Urine",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "14957-5": {
+  "display": "Microalbumin [Mass/volume] in Urine",
+  "property": "MCnc",
+  "status": "ACTIVE"
+ },
+ "14959-1": {
+  "display": "Microalbumin/Creatinine [Mass Ratio] in Urine",
+  "property": "MRto",
+  "status": "ACTIVE"
+ },
+ "32294-1": {
+  "display": "Albumin/Creatinine [Ratio] in Urine",
+  "property": "Ratio",
+  "status": "ACTIVE"
+ },
+ "25404-5": {
+  "display": "Ethambutol [Presence] in Serum or Plasma",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "50556-0": {
+  "display": "Urinalysis dipstick panel - Urine by Automated test strip",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "24356-8": {
+  "display": "Urinalysis complete panel - Urine",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "57021-8": {
+  "display": "CBC W Auto Differential panel - Blood",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "58410-2": {
+  "display": "CBC panel - Blood by Automated count",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "24323-8": {
+  "display": "Comprehensive metabolic 2000 panel - Serum or Plasma",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "24326-1": {
+  "display": "Electrolytes 1998 panel - Serum or Plasma",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "24935-9": {
+  "display": "MR Cervical spine",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "24590-2": {
+  "display": "MR Brain",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "43765-7": {
+  "display": "US.doppler Carotid arteries - bilateral",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "39289-4": {
+  "display": "Follow-up (referred to) provider /specialist, appointment date CPHS",
+  "property": "Date",
+  "status": "ACTIVE"
+ },
+ "11523-8": {
+  "display": "EEG study",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "18755-9": {
+  "display": "Deprecated MRI Unspecified site study",
+  "property": "Find",
+  "status": "DEPRECATED"
+ },
+ "18760-9": {
+  "display": "Deprecated US Unspecified system Study",
+  "property": "Find",
+  "status": "DEPRECATED"
+ },
+ "11502-2": {
+  "display": "Laboratory report",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "34117-2": {
+  "display": "History and Physical Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "34746-8": {
+  "display": "Nurse Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "11488-4": {
+  "display": "Consult Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "11506-3": {
+  "display": "Progress Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "18842-5": {
+  "display": "Discharge Summary",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "51851-4": {
+  "display": "Administrative Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "10154-3": {
+  "display": "Chief complaint Narrative - Reported",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "11348-0": {
+  "display": "History of Past illness note",
+  "property": "Hx",
+  "status": "ACTIVE"
+ },
+ "29545-1": {
+  "display": "Physical findings note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "29548-5": {
+  "display": "Diagnosis Narrative",
+  "property": "Imp",
+  "status": "ACTIVE"
+ },
+ "30954-2": {
+  "display": "Relevant diagnostic tests/laboratory data note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "18748-4": {
+  "display": "Diagnostic imaging study",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "8648-8": {
+  "display": "Hospital course note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "10160-0": {
+  "display": "History of Medication use Narrative",
+  "property": "Hx",
+  "status": "ACTIVE"
+ },
+ "47519-4": {
+  "display": "History of Procedures Document",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "8716-3": {
+  "display": "Vital signs note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "18776-5": {
+  "display": "Plan of Care Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "60591-5": {
+  "display": "Patient summary Document",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "11450-4": {
+  "display": "Problem list - Reported",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "48765-2": {
+  "display": "Allergies and adverse reactions Document",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "11369-6": {
+  "display": "History of Immunization note",
+  "property": "Hx",
+  "status": "ACTIVE"
+ },
+ "34133-9": {
+  "display": "Summary of Episode Note",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "8867-4": {
+  "display": "Heart rate",
+  "property": "NRat",
+  "status": "ACTIVE"
+ },
+ "8310-5": {
+  "display": "Body temperature",
+  "property": "Temp",
+  "status": "ACTIVE"
+ },
+ "85354-9": {
+  "display": "Blood pressure panel with all children optional",
+  "property": "-",
+  "status": "ACTIVE"
+ },
+ "8480-6": {
+  "display": "Systolic blood pressure",
+  "property": "Pres",
+  "status": "ACTIVE"
+ },
+ "8462-4": {
+  "display": "Diastolic blood pressure",
+  "property": "Pres",
+  "status": "ACTIVE"
+ },
+ "9279-1": {
+  "display": "Respiratory rate",
+  "property": "NRat",
+  "status": "ACTIVE"
+ },
+ "2708-6": {
+  "display": "Oxygen saturation in Arterial blood",
+  "property": "MFr",
+  "status": "ACTIVE"
+ },
+ "59408-5": {
+  "display": "Oxygen saturation in Arterial blood by Pulse oximetry",
+  "property": "MFr",
+  "status": "ACTIVE"
+ },
+ "29463-7": {
+  "display": "Body weight",
+  "property": "Mass",
+  "status": "ACTIVE"
+ },
+ "8302-2": {
+  "display": "Body height",
+  "property": "Len",
+  "status": "ACTIVE"
+ },
+ "39156-5": {
+  "display": "Body mass index (BMI) [Ratio]",
+  "property": "Ratio",
+  "status": "ACTIVE"
+ },
+ "9269-2": {
+  "display": "Glasgow coma score total",
+  "property": "Fcn",
+  "status": "ACTIVE"
+ },
+ "80319-7": {
+  "display": "Breath sounds by Auscultation",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "8650-4": {
+  "display": "Hospital discharge disposition note",
+  "property": "Type",
+  "status": "ACTIVE"
+ },
+ "10183-2": {
+  "display": "Hospital discharge medications Narrative",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "42348-3": {
+  "display": "Advance Healthcare Directives",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "46241-6": {
+  "display": "Hospital admission diagnosis Narrative - Reported",
+  "property": "Imp",
+  "status": "ACTIVE"
+ },
+ "55109-3": {
+  "display": "Complications Document",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "11329-0": {
+  "display": "History general Narrative - Reported",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "10164-2": {
+  "display": "History of Present illness Narrative",
+  "property": "Hx",
+  "status": "ACTIVE"
+ },
+ "8653-8": {
+  "display": "Hospital Discharge Instructions",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "29549-3": {
+  "display": "Medication administered Narrative",
+  "property": "Type",
+  "status": "ACTIVE"
+ },
+ "74198-3": {
+  "display": "Trauma Summary Registry Report",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "30667-0": {
+  "display": "MR Cervical spine WO contrast",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "30657-1": {
+  "display": "MR Brain WO contrast",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "24733-8": {
+  "display": "US.doppler Head vessels",
+  "property": "Find",
+  "status": "ACTIVE"
+ },
+ "771-6": {
+  "display": "Nucleated erythrocytes [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "58443-3": {
+  "display": "Other cells [#/volume] in Blood by Automated count",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "20454-5": {
+  "display": "Protein [Presence] in Urine by Test strip",
+  "property": "PrThr",
+  "status": "ACTIVE"
+ },
+ "34928-2": {
+  "display": "Urobilinogen [Moles/volume] in Urine by Test strip",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ },
+ "20408-1": {
+  "display": "Leukocytes [#/volume] in Urine by Test strip",
+  "property": "NCnc",
+  "status": "ACTIVE"
+ },
+ "30002-0": {
+  "display": "Creatinine [Moles/volume] in Urine by Test strip",
+  "property": "SCnc",
+  "status": "ACTIVE"
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "task": "observe:doc-06",
+ "docs": [
+  "doc-06"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "observations": [],
+  "medication_administrations": [],
+  "care_plans": [],
+  "documents_patch": [
+   {
+    "id": "doc-06",
+    "title": "BẢN TÓM TẮT HỒ SƠ BỆNH ÁN",
+    "date": "2026-09-09",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   }
+  ],
+  "conflicts": [],
+  "unmapped": [
+   {
+    "item": "Họ và tên: Nguyễn Thị Mẫu",
+    "reason": "Thông tin hành chính bệnh nhân không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Patient.name trong các resource khác."
+   },
+   {
+    "item": "Ngày sinh: 14/03/1958",
+    "reason": "Thông tin hành chính bệnh nhân không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Patient.birthDate trong các resource khác."
+   },
+   {
+    "item": "Giới: Nữ",
+    "reason": "Thông tin hành chính bệnh nhân không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Patient.gender trong các resource khác."
+   },
+   {
+    "item": "Địa chỉ: Phường Nông Trang, Tỉnh Phú Thọ",
+    "reason": "Thông tin hành chính bệnh nhân không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Patient.address trong các resource khác."
+   },
+   {
+    "item": "Số thẻ BHYT: HT2259900112233",
+    "reason": "Thông tin bảo hiểm không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Coverage.identifier trong các resource khác."
+   },
+   {
+    "item": "Vào viện lúc: 08 giờ 30 phút ngày 02/09/2026",
+    "reason": "Thông tin thời gian vào viện không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Encounter.period.start trong các resource khác."
+   },
+   {
+    "item": "Ra viện lúc: 09 giờ 00 phút ngày 09/09/2026",
+    "reason": "Thông tin thời gian ra viện không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Encounter.period.end trong các resource khác."
+   },
+   {
+    "item": "Khoa điều trị: Nội hô hấp",
+    "reason": "Thông tin khoa điều trị không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Encounter.serviceProvider hoặc Encounter.location trong các resource khác."
+   },
+   {
+    "item": "Chẩn đoán vào viện: Viêm phổi thùy dưới phải",
+    "reason": "Thông tin chẩn đoán không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Condition (chẩn đoán vào viện) trong các resource khác."
+   },
+   {
+    "item": "Chẩn đoán ra viện: Bệnh chính: Viêm phổi thùy dưới phải (J18.1)",
+    "reason": "Thông tin chẩn đoán không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Condition (chẩn đoán ra viện) trong các resource khác."
+   },
+   {
+    "item": "Bệnh kèm theo: Đái tháo đường type 2 không biến chứng (E11.9)",
+    "reason": "Thông tin chẩn đoán không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Condition (bệnh kèm theo) trong các resource khác."
+   },
+   {
+    "item": "Bệnh kèm theo: Tăng huyết áp vô căn (I10)",
+    "reason": "Thông tin chẩn đoán không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Condition (bệnh kèm theo) trong các resource khác."
+   },
+   {
+    "item": "Tóm tắt quá trình điều trị: Điều trị kháng sinh Ceftriaxon 7 ngày, kiểm soát đường huyết bằng metformin, hạ áp amlodipin. Bệnh nhân hết sốt sau 24 giờ, giảm ho, X-quang kiểm tra cải thiện.",
+    "reason": "Tóm tắt quá trình điều trị không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Composition.section (treatment summary) trong các resource khác."
+   },
+   {
+    "item": "Kết quả điều trị: Đỡ, giảm",
+    "reason": "Kết quả điều trị không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Encounter.outcome trong các resource khác."
+   },
+   {
+    "item": "Tình trạng ra viện: Ra viện",
+    "reason": "Tình trạng ra viện không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào Encounter.dischargeDisposition trong các resource khác."
+   },
+   {
+    "item": "Hướng điều trị tiếp: Tái khám sau 2 tuần tại phòng khám Nội; tiếp tục metformin và amlodipin.",
+    "reason": "Hướng điều trị tiếp không thuộc các loại resource được yêu cầu (observations, medication_administrations, care_plans).",
+    "action": "Sẽ được ánh xạ vào CarePlan (discharge instructions) hoặc Composition.section (follow-up) trong các resource khác."
+   }
+  ],
+  "review_notes": [
+   "Thông tin về chẩn đoán, quá trình điều trị, kết quả điều trị, tình trạng ra viện, hướng điều trị tiếp và thông tin hành chính bệnh nhân được ghi nhận nhưng không được ánh xạ vào các trường `observations`, `medication_administrations`, `care_plans` theo yêu cầu của nhiệm vụ. Các thông tin này thường được ánh xạ vào các resource như Patient, Encounter, Condition, Composition."
+  ]
+ }
+}

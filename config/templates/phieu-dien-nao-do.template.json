@@ -1,0 +1,34 @@
+{
+  "THÔNG TIN BIỂU MẪU": {
+    "Sở Y tế": "Dòng tên Sở Y tế in đậm ở đầu phiếu (phía trên tên bệnh viện); chuỗi, giữ nguyên chữ hoa như bản in.",
+    "Bệnh viện": "Dòng tên bệnh viện in ngay dưới dòng Sở Y tế ở đầu phiếu; chuỗi, giữ nguyên như bản in.",
+    "Tên phiếu": "Tiêu đề phiếu in chữ lớn ở giữa trang; chuỗi, giữ nguyên chữ hoa như bản in.",
+    "Mã số": "Giá trị sau nhãn 'MS:' ở góc trên bên phải; chuỗi, giữ nguyên dấu phân cách và số 0 ở đầu.",
+    "Mã phiếu": "Giá trị sau nhãn 'Mã phiếu:' ở góc trên bên phải; chuỗi, giữ nguyên ký tự và số 0 ở đầu; null nếu để trống.",
+    "Mã bệnh nhân": "Giá trị sau nhãn 'Mã BN:' ở góc trên bên phải (phía trên mã vạch); chuỗi, giữ nguyên chữ cái, chữ số và số 0 ở đầu."
+  },
+  "THÔNG TIN BỆNH NHÂN": {
+    "Tên bệnh nhân": "Giá trị sau nhãn 'Tên bệnh nhân:'; chuỗi, giữ nguyên chữ hoa như bản in.",
+    "Tuổi": "Giá trị sau nhãn 'Tuổi:' (cùng dòng với họ tên, bên phải); chuỗi, chỉ ghi phần được in sau nhãn.",
+    "Giới tính": "Giá trị sau nhãn 'Giới tính:' ở cuối dòng họ tên; chuỗi, giữ nguyên như bản in.",
+    "Địa chỉ": "Giá trị sau nhãn 'Địa chỉ:'; chuỗi, giữ nguyên văn gồm dấu phẩy, dấu '-' và khoảng trắng đúng như bản in (không tự thêm dấu cách sau dấu phẩy); null nếu trống.",
+    "Khoa": "Giá trị sau nhãn 'Khoa:'; chuỗi, giữ nguyên văn gồm dấu phẩy, số phòng và khoảng trắng đúng như bản in.",
+    "Chẩn đoán": "Giá trị sau nhãn 'Chẩn đoán:'; chuỗi, giữ nguyên văn gồm dấu phân cách (-, ;, ,) và khoảng trắng đúng như bản in, không tự thêm/bớt dấu cách; chỗ tự xuống dòng do hết khổ nối bằng một dấu cách; null nếu trống.",
+    "Yêu cầu kiểm tra": "Giá trị sau nhãn 'Yêu cầu kiểm tra:'; chuỗi, giữ nguyên như bản in."
+  },
+  "KẾT QUẢ ĐIỆN NÃO": {
+    "Mô tả": [
+      "Mỗi phần tử là một mục (thường bắt đầu bằng '- ') dưới nhãn 'Mô tả:', theo đúng thứ tự in; chuỗi, giữ nguyên văn, dấu câu và ký hiệu; nếu một mục có chỗ xuống dòng thật (dòng ngắn dừng trước lề phải, dòng sau in cách như đoạn mới) thì giữ '\\n' trong cùng phần tử."
+    ],
+    "Kết luận": "Nội dung dưới nhãn in đậm 'Kết luận:' (nhãn in đậm không đưa vào giá trị); chuỗi. Phần nội dung của phiếu có thể tự in lặp lại tiền tố 'Kết luận:' ở chữ thường ngay đầu đoạn — tiền tố lặp này thuộc nội dung điền nên giữ nguyên trong giá trị. Chỗ tự xuống dòng do hết khổ nối bằng một dấu cách."
+  },
+  "XÁC NHẬN": {
+    "Thời gian": "Dòng giờ và ngày in nghiêng phía trên chức danh 'BÁC SĨ ĐIỀU TRỊ'; chuỗi, giữ nguyên định dạng giờ, ngày như bản in; null nếu không có.",
+    "Bác sĩ điều trị": {
+      "Họ tên": "Họ tên in dưới chữ ký trong khối 'BÁC SĨ ĐIỀU TRỊ' (bên trái), gồm học vị viết tắt như bản in; chuỗi."
+    },
+    "Bác sĩ chuyên khoa": {
+      "Họ tên": "Họ tên in dưới chữ ký trong khối 'BS CHUYÊN KHOA' (bên phải), gồm học vị/chức danh viết tắt như bản in; chuỗi."
+    }
+  }
+}

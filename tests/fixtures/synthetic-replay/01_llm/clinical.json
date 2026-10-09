@@ -1,0 +1,304 @@
+{
+ "task": "clinical",
+ "docs": [
+  "doc-01",
+  "doc-02",
+  "doc-03",
+  "doc-04",
+  "doc-05",
+  "doc-06"
+ ],
+ "meta": {
+  "model": "gemini-2.5-flash",
+  "usage": {
+   "finish_reason": "STOP"
+  }
+ },
+ "response": {
+  "conditions": [
+   {
+    "id": "cond-ad1-viem-phoi-thuy-duoi-phai",
+    "role": "admission",
+    "rank": 1,
+    "text": "Viêm phổi thùy dưới phải",
+    "code": {
+     "text": "Viêm phổi thùy dưới phải",
+     "codings": [
+      {
+       "system": "icd10vn",
+       "code": "J18.1",
+       "source": "document"
+      }
+     ]
+    },
+    "clinical_status": "active",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-02T08:30:00+07:00",
+    "recorder": "pr-p2",
+    "asserter": "pr-p2",
+    "sources": [
+     "doc-01",
+     "doc-02",
+     "doc-04",
+     "doc-05",
+     "doc-06"
+    ]
+   },
+   {
+    "id": "cond-ad2-dai-thao-duong-type-2",
+    "role": "admission",
+    "text": "Đái tháo đường type 2",
+    "code": {
+     "text": "Đái tháo đường type 2",
+     "codings": [
+      {
+       "system": "icd10vn",
+       "code": "E11.9",
+       "source": "document"
+      }
+     ]
+    },
+    "clinical_status": "active",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-02T08:30:00+07:00",
+    "recorder": "pr-p2",
+    "asserter": "pr-p2",
+    "sources": [
+     "doc-01",
+     "doc-04"
+    ]
+   },
+   {
+    "id": "cond-ad3-tang-huyet-ap-vo-can",
+    "role": "admission",
+    "text": "Tăng huyết áp vô căn",
+    "code": {
+     "text": "Tăng huyết áp vô căn",
+     "codings": [
+      {
+       "system": "icd10vn",
+       "code": "I10",
+       "source": "document"
+      }
+     ]
+    },
+    "clinical_status": "active",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-02T08:30:00+07:00",
+    "recorder": "pr-p2",
+    "asserter": "pr-p2",
+    "sources": [
+     "doc-01",
+     "doc-04"
+    ]
+   },
+   {
+    "id": "cond-dd1-viem-phoi-thuy-duoi-phai",
+    "role": "discharge",
+    "rank": 1,
+    "text": "Viêm phổi thùy dưới phải",
+    "code": {
+     "text": "Viêm phổi thùy dưới phải",
+     "codings": [
+      {
+       "system": "icd10vn",
+       "code": "J18.1",
+       "source": "document"
+      }
+     ]
+    },
+    "clinical_status": "resolved",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-09",
+    "recorder": "pr-p2",
+    "asserter": "pr-p2",
+    "sources": [
+     "doc-06"
+    ]
+   },
+   {
+    "id": "cond-cm1-dai-thao-duong-type-2-khong-bien-chung",
+    "role": "comorbidity",
+    "text": "Đái tháo đường type 2 không biến chứng",
+    "code": {
+     "text": "Đái tháo đường type 2 không biến chứng",
+     "codings": [
+      {
+       "system": "icd10vn",
+       "code": "E11.9",
+       "source": "document"
+      }
+     ]
+    },
+    "clinical_status": "active",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-09",
+    "recorder": "pr-p2",
+    "asserter": "pr-p2",
+    "sources": [
+     "doc-06"
+    ]
+   },
+   {
+    "id": "cond-cm2-tang-huyet-ap-vo-can",
+    "role": "comorbidity",
+    "text": "Tăng huyết áp vô căn",
+    "code": {
+     "text": "Tăng huyết áp vô căn",
+     "codings": [
+      {
+       "system": "icd10vn",
+       "code": "I10",
+       "source": "document"
+      }
+     ]
+    },
+    "clinical_status": "active",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-09",
+    "recorder": "pr-p2",
+    "asserter": "pr-p2",
+    "sources": [
+     "doc-06"
+    ]
+   }
+  ],
+  "encounter_diagnoses": [
+   {
+    "condition": "cond-ad1-viem-phoi-thuy-duoi-phai",
+    "use": "AD",
+    "rank": 1
+   },
+   {
+    "condition": "cond-ad2-dai-thao-duong-type-2",
+    "use": "AD"
+   },
+   {
+    "condition": "cond-ad3-tang-huyet-ap-vo-can",
+    "use": "AD"
+   },
+   {
+    "condition": "cond-dd1-viem-phoi-thuy-duoi-phai",
+    "use": "DD",
+    "rank": 1
+   },
+   {
+    "condition": "cond-cm1-dai-thao-duong-type-2-khong-bien-chung",
+    "use": "CM"
+   },
+   {
+    "condition": "cond-cm2-tang-huyet-ap-vo-can",
+    "use": "CM"
+   }
+  ],
+  "allergies": [
+   {
+    "id": "ai-penicillin",
+    "text": "Penicillin (nổi mẩn)",
+    "verification_status": "confirmed",
+    "recorded_date": "2026-09-02T08:30:00+07:00",
+    "recorder": "pr-p2",
+    "sources": [
+     "doc-01"
+    ]
+   }
+  ],
+  "family_history": [
+   {
+    "id": "fmh-me-dai-thao-duong",
+    "status": "completed",
+    "relationship": {
+     "text": "Mẹ",
+     "codings": []
+    },
+    "conditions": [
+     {
+      "text": "Đái tháo đường"
+     }
+    ],
+    "note": "Mẹ bị đái tháo đường",
+    "sources": [
+     "doc-01"
+    ]
+   }
+  ],
+  "clinical_impressions": [],
+  "documents_patch": [
+   {
+    "id": "doc-01",
+    "title": "PHIẾU KHÁM BỆNH VÀO VIỆN",
+    "date": "2026-09-02T08:30:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   },
+   {
+    "id": "doc-02",
+    "title": "KẾT QUẢ XÉT NGHIỆM HUYẾT HỌC",
+    "date": "2026-09-02T10:05:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p4",
+     "pr-p5"
+    ]
+   },
+   {
+    "id": "doc-03",
+    "title": "KẾT QUẢ XÉT NGHIỆM SINH HÓA MÁU",
+    "date": "2026-09-02T10:40:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p4",
+     "pr-p5"
+    ]
+   },
+   {
+    "id": "doc-04",
+    "title": "PHIẾU ĐIỀU TRỊ",
+    "date": "2026-09-02T10:00:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   },
+   {
+    "id": "doc-05",
+    "title": "PHIẾU CHĂM SÓC (Cấp II)",
+    "date": "2026-09-02T14:00:00+07:00",
+    "extracted": true,
+    "authors": [
+     "pr-p6"
+    ]
+   },
+   {
+    "id": "doc-06",
+    "title": "BẢN TÓM TẮT HỒ SƠ BỆNH ÁN",
+    "date": "2026-09-09",
+    "extracted": true,
+    "authors": [
+     "pr-p2"
+    ]
+   }
+  ],
+  "conflicts": [
+   {
+    "field": "conditions.text",
+    "values": [
+     {
+      "value": "Đái tháo đường type 2",
+      "source": "doc-01"
+     },
+     {
+      "value": "Đái tháo đường type 2 không biến chứng",
+      "source": "doc-06"
+     }
+    ],
+    "resolution": "Tạo 2 Condition riêng biệt do có sự khác biệt về mô tả và vai trò (admission vs comorbidity).",
+    "rationale": "Phiếu khám vào viện ghi chẩn đoán ban đầu, bản tóm tắt HSBA ghi chẩn đoán ra viện chi tiết hơn và có vai trò bệnh kèm theo."
+   }
+  ],
+  "unmapped": [],
+  "review_notes": []
+ }
+}

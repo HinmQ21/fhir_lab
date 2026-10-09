@@ -1,0 +1,64 @@
+{
+  "skill_name": "vn-fhir-convert",
+  "notes": "Chấm bằng scripts/compare.py (so với gt/<case>/fhir) + scripts/validate_fhir.py (0 lỗi) + đọc review.md. Dữ liệu thật trong gt/ không được đưa ra ngoài; eval 3 dùng bản ẩn danh.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "full-case-to-fhir",
+      "prompt": "Chuyển bộ hồ sơ data/sample/HSBA-BN001736827.zip sang FHIR VN Core 0.10.0, đầy đủ bảng kê chi phí, và cho tôi biết chỗ nào bạn phải suy luận.",
+      "files": ["data/sample/HSBA-BN001736827.zip", "vendor/"],
+      "expected_output": "out/BN001736827/clinical.json (schema v2) + fhir/ (3 bundle) + review.md; validator 0 lỗi; scorecard so với gt/BN001736827/fhir đạt F1 ≥ 0.95 trên Observation/Condition/ServiceRequest/DiagnosticReport; Claim/Invoice khớp từng dòng; review.md liệt kê conflicts (tuổi 43/44, BP 120/80 vs 120/70, Thu phí vs BHYT, giờ 08h35 trùng) và unmapped (mã CSKCB, mã NV, CLS cho TCD/EEG).",
+      "assertions": [
+        "validate_fhir.py trả 0 lỗi trên out/BN001736827/fhir",
+        "compare.py: Observation recall ≥ 0.95 và precision ≥ 0.95",
+        "compare.py: Condition khớp 3/3 khoá ICD (R51 không bắt buộc, H81.8 và M50.2 bắt buộc, không có M50.1)",
+        "Invoice.totalNet = 5108980 và tổng quỹ BHYT = 2003184",
+        "Không có coding LOINC sai check digit hoặc nằm trong danh sách null của loinc_verified.json",
+        "Mọi Observation sinh hiệu có unit đúng fixedString ('/min', '°C', 'mmHg')",
+        "review.md có mục conflicts với ≥ 4 mục và unmapped với ≥ 3 mục",
+        "Kết luận siêu âm Doppler cảnh là 'Hình ảnh siêu âm hệ mạch cảnh hiện không thấy bất thường.' (lấy từ tờ điều trị, không bịa)"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "lab-sheet-only",
+      "prompt": "Tôi chỉ có 3 phiếu kết quả xét nghiệm (huyết học, sinh hoá, nước tiểu) của bệnh nhân này trong thư mục out/labs/. Mã hoá LOINC + CLS cho từng chỉ số và dựng Observation/DiagnosticReport hợp lệ VN Core.",
+      "files": ["out/labs/3_1. KẾT QUẢ XÉT NGHIỆM HUYẾT HỌC.pdf", "out/labs/4_6. KẾT QUẢ XÉT NGHIỆM SINH HÓA MÁU.pdf", "out/labs/5_9. KẾT QUẢ XÉT NGHIỆM NƯỚC TIỂU.pdf"],
+      "expected_output": "52 Observation (25 HH, 14 SH, 13 NT) với LOINC đúng loại đơn vị (# vs %, mmol/L vs mg/dL), CLS khối 1000147–1000169 cho CBC, Specimen BLD/SER/UR, 3 DiagnosticReport (SH text-only code), validator 0 lỗi; các ô trống → data-absent-reason; 'Ca 70' giữ 70 /µL + note.",
+      "assertions": [
+        "Neut# → 751-8 và Neut% → 770-8 (không đảo)",
+        "Calci mmol/L → 2000-8; LDL-C mmol/L → 22748-8; Glucose máu → 14749-6; Glucose niệu → 25428-4",
+        "MPV → 32623-1 (không phải 32623-3)",
+        "Mọi valueQuantity có system UCUM và code (10*9/L, 10*12/L, g/dL, fL, pg, mmol/L, umol/L, U/L, /uL)",
+        "DiagnosticReport sinh hoá không gán 24323-8 hay 24326-1 cho cả panel",
+        "validate_fhir.py 0 lỗi"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "cost-statement-from-example",
+      "prompt": "Từ assets/example/clinical.example.json, chỉ dựng bundle bảng kê chi phí (cost statement) và giải thích vì sao Composition ở trạng thái preliminary.",
+      "files": ["assets/example/clinical.example.json"],
+      "expected_output": "bundle-cost-statement.json hợp lệ (Composition + Invoice + Account + Claim + Provenance), totalNet = tổng dòng, mỗi dòng đủ 4 khoản phân bổ; giải thích: thiếu 2 vai ký (billing-confirmation, patient-confirmation) nên không thể final theo invariant three-signatures.",
+      "assertions": [
+        "Bundle có đúng 1 Composition (entry đầu), 1 Invoice, 1 Account",
+        "Invoice: Σ priceComponent base = totalNet; Σ(insuranceFund+patientCopay+otherSource+patientSelfPay) mỗi dòng = base",
+        "Composition.status = preliminary và attester có role preparer",
+        "validate_fhir.py 0 lỗi trên bundle",
+        "Không có giá trị CCCD/BHYT thật của ca gốc trong đầu ra (dữ liệu ẩn danh)"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "no-fabrication-guard",
+      "prompt": "Mã hoá chẩn đoán 'Đau đầu kéo dài CRNN' và dịch vụ 'Siêu âm Doppler xuyên sọ', 'Ghi điện não đồ thông thường' theo VN Core; nếu không có mã thì nói rõ.",
+      "files": ["vendor/"],
+      "expected_output": "R51 (icd10vn + icd10who) với candidates; Doppler xuyên sọ: LOINC 24733-8, KHÔNG có CLS; EEG: LOINC 11523-8, KHÔNG có CLS; cả hai ghi unmapped cho CLS thay vì gán mã gần giống.",
+      "assertions": [
+        "Không gán mã CLS nào cho Doppler xuyên sọ và điện não đồ",
+        "Condition có coding icd10vn R51 và text nguyên văn 'Đau đầu kéo dài CRNN'",
+        "Trả lời nêu rõ mã nào tra từ term_lookup và mã nào không có"
+      ]
+    }
+  ]
+}
